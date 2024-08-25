@@ -1,0 +1,53 @@
+{
+  "licenses": [
+    {
+      "name": "General Public License",
+      "tools": [
+        "JavaFX",
+        "Git"
+      ]
+    },
+    {
+      "name": "Apache 2.0",
+      "tools": [
+        "Dagger",
+        "RxJava",
+        "Retrofit",
+        "IntelliJ",
+        "Gradle"
+      ]
+    },
+    {
+      "name": "MIT",
+      "tools": [
+        "FulibFx",
+        "Mockito",
+        "Discord GameSDK 4J",
+        "JMockit"
+      ]
+    },
+    {
+      "name": "Eclipse Public License v2.0",
+      "tools": [
+        "JUnit",
+        "JGraphT"
+      ]
+    },
+    {
+      "name": "BSD 3-Clause License",
+      "tools": [
+        "ControlsFx"
+      ]
+    }
+  ],
+  "developers": [
+    "Mohaammad Hasan",
+    "Sinja Kühne",
+    "Adnan Nezovic",
+    "Daniel Phan",
+    "Robin Weber",
+    "Cedric Wiesel",
+    "Pascal Zentner"
+  ]
+}
+

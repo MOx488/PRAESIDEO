@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<fx:root alignment="TOP_CENTER" style="-fx-background-color: transparent;" stylesheets="@../../styles.css" type="VBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.events.EventEffectComponent">
+    <Label fx:id="effectingVariableName" styleClass="small-large" stylesheets="@../../styles.css"
+           text="3434343444444444444444444"/>
+    <Label minWidth="-Infinity" styleClass="small-large" stylesheets="@../../styles.css"
+           text="-----------------------"/>
+    <VBox fx:id="effectContainer" alignment="TOP_CENTER"/>
+</fx:root>

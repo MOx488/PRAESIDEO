@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<fx:root fx:id="traitInfoVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity" stylesheets="@../../styles.css" type="VBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.traits.TraitInfoComponent">
+    <padding>
+        <Insets left="5.0" top="5.0"/>
+    </padding>
+    <Label fx:id="seperatorLabel" styleClass="small-medium" text="--------"/>
+    <Label fx:id="traitInfoLabel" styleClass="small-medium" text="ProductionORCost"/>
+</fx:root>

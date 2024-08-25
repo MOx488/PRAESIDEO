@@ -1,0 +1,784 @@
+@font-face {
+    font-family: Jaro;
+    src: url("font/Jaro.ttf");
+}
+
+.root {
+    -fx-background-image: null;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.default-background {
+    -fx-background-image: url("image/default_background.png");
+}
+
+.label, Text, .check-box, .text-field, .button, .choice-box, .tab-pane .tab-label, .text-area, .toggle-button, .color-palette .hyperlink, .titled-pane .title .text {
+    -fx-font-family: Jaro;
+}
+
+.button:pressed, .toggle-button:pressed {
+    -fx-opacity: 0.5;
+}
+
+.toggle-button:selected:pressed {
+    -fx-opacity: 1;
+}
+
+.image-view {
+    -fx-opacity: 1;
+}
+
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding: -7;
+}
+
+.tab-header-background, .customcolor-controls-background, .scroll-pane, .scroll-pane .viewport, #eventInformationScrollPane .scroll-pane, #eventInformationScrollPane .viewport, .icon-container, .icon-container .viewport {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-padding: 0 50 0 50;
+}
+
+.tab-pane .focus-indicator {
+    -fx-border-width: 1, 1;
+    -fx-border-color: transparent;
+    -fx-border-insets: -4 -4 -6 -5, -2 -2 -5 -3;
+    -fx-border-radius: 2, 1;
+}
+
+.tab-pane .tab-content-area {
+    -fx-background-color: rgba(12, 12, 12, 0.8);
+    -fx-border-radius: 3;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-background-insets: 2;
+}
+
+.list-view .list-cell, .transparent {
+    -fx-background-color: rgb(0, 0, 0, 0)
+}
+
+#gameList .list-cell:selected, #gameList .list-cell:filled:hover {
+    -fx-background-color: rgb(0, 0, 0, 0.5)
+}
+
+#fleetsListView .list-cell:selected, #fleetsListView .list-cell:filled:hover {
+    -fx-background-color: rgb(0, 0, 0, 0.5)
+}
+
+#friendListView .list-cell:selected, #friendListView .list-cell:filled:hover {
+    -fx-background-color: rgb(205, 205, 205)
+}
+
+#gameCircle, .button .text, .button, #infoBox, Text.small-medium, Text.medium, Text.medium-large, Text.large, .titled-pane .title .text {
+    -fx-fill: #FF8000;
+}
+
+.vBox-buildingIcon {
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.vBox-buildIcon {
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.vBox:selected .vBox-buildIcon {
+    -fx-background-color: yellow;
+}
+
+#buildingList .list-cell:selected, #buildingList .list-cell:filled:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-border-radius: 20 20 20 20;
+    -fx-background-radius: 20 20 20 20;
+}
+
+.list-view .scroll-bar .thumb, .scroll-pane .thumb {
+    -fx-background-color: #FF8000;
+}
+
+#scrollPaneTraitInfo .scroll-bar:vertical {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+}
+
+
+.scroll-bar:horizontal {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+}
+
+.scroll-bar:horizontal .thumb, .scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #FF8800;
+    -fx-background-radius: 5;
+}
+
+#scrollPaneTraitInfo .scroll-bar:vertical .thumb {
+    -fx-background-color: #FF8800;
+    -fx-background-radius: 5;
+}
+
+.small, .medium, .medium-large, .large, .big, .tab-pane .tab-label, .custom-color-dialog .controls-pane .label, .toggle-button, .small-medium, .small-large {
+    -fx-text-fill: #FF8000;
+}
+
+.toggle-button:selected, #castleNameLabel {
+    -fx-text-fill: #FFFFFF;
+}
+
+.text-field, .color-picker .label, .notification-bar > .pane .label {
+    -fx-font-size: 16;
+    -fx-text-fill: #FFFFFF;
+}
+
+.button, .tab-pane .tab, .toggle-button {
+    -fx-border-width: 3;
+    -fx-border-radius: 5;
+    -fx-border-color: #FF8000;
+    -fx-background-color: linear-gradient(to bottom, #660000, #000000);
+    -fx-padding: 6 20 6 20;
+    -fx-background-insets: 2;
+    -fx-cursor: hand;
+}
+
+.small-toggle-button {
+    -fx-padding: 6 6 6 6;
+}
+
+.esc-button {
+    -fx-border-color: #E6E6E6;
+    -fx-fill: #E6E6E6;
+    -fx-padding: 2 2 2 2;
+    -fx-text-fill: #FFFFFF;
+}
+
+.toolbox-button {
+    -fx-border-color: #000000;
+    -fx-padding: 0 0 0 0;
+    -fx-border-radius: 0;
+    -fx-background-color: #000000;
+}
+
+.button .text, .tab-pane .tab-label {
+    -fx-font-size: 18;
+}
+
+.button:disabled .text, .toggle-button, .small-toggle-button:selected {
+    -fx-fill: #000000;
+}
+
+.button:disabled .label {
+    -fx-fill: #000000;
+    -fx-opacity: 1;
+}
+
+.button:disabled .image-view {
+    -fx-opacity: 1;
+}
+
+.tab-pane .tab:selected .tab-label, .integer-field.color-input-field.text-input.text-field, .webcolor-field.web-field.text-input.text-field {
+    -fx-text-fill: #000000;
+}
+
+.button:disabled, .tab-pane .tab:selected, .toggle-button:selected {
+    -fx-background-color: linear-gradient(to bottom, #CCCCCC, #000000);
+    -fx-border-color: #000000;
+}
+
+.back-button, .button:cancel {
+    -fx-border-color: #E6E6E6;
+}
+
+.back-button .text, .button:cancel .text, .white-prompt-button .text {
+    -fx-fill: #E6E6E6;
+}
+
+.castleView-button {
+    -fx-border-color: #FF8000;
+    -fx-border-width: 2;
+    -fx-padding: 0;
+}
+
+.castleView-button .text {
+    -fx-fill: #E6E6E6;
+    -fx-font-size: 14px;
+}
+
+.small-button {
+    -fx-padding: 4 10 4 10;
+}
+
+.small-button .text {
+    -fx-font-size: 12;
+}
+
+.medium-button .text {
+    -fx-font-size: 16;
+}
+
+.image-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+#infoBox {
+    -fx-border-color: #FF8000;
+    -fx-border-width: 3;
+    -fx-border-radius: 100;
+    -fx-padding: 12;
+}
+
+.hoverStatsLabel {
+    -fx-font-size: 20;
+    -fx-text-fill: #FF8000;
+}
+
+
+.hoverStatsLabel:hover {
+    -fx-effect: dropshadow(three-pass-box, #FF8000, 10, 0, 0, 0);
+}
+
+.small {
+    -fx-font-size: 12;
+    -fx-text-fill: #FF8000;
+}
+
+.small-medium {
+    -fx-font-size: 14;
+}
+
+.medium {
+    -fx-font-size: 16;
+}
+
+.small-large {
+    -fx-font-size: 20;
+}
+
+.medium-large, .titled-pane .title .text {
+    -fx-font-size: 32;
+}
+
+.large {
+    -fx-font-size: 48;
+}
+
+.underline {
+    -fx-underline: true;
+    -fx-underline-color: #FF8000;
+}
+
+.error {
+    -fx-text-fill: #FF3333;
+}
+
+.success {
+    -fx-text-fill: #66FF66;
+}
+
+.container {
+    -fx-background-insets: 2;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-border-radius: 4;
+    -fx-spacing: 12;
+}
+
+.container-market {
+    -fx-background-insets: 2;
+    -fx-border-color: #9f9f9f;
+    -fx-border-width: 3;
+    -fx-border-radius: 4;
+    -fx-spacing: 12;
+}
+
+.container-withoutSpacing {
+    -fx-background-insets: 2;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+    -fx-border-radius: 20 20 10 10;
+}
+
+.dark-container {
+    -fx-background-color: linear-gradient(to bottom, rgb(51, 51, 51, 0.9) 50%, rgb(0, 0, 0, 0.9) 100%);
+}
+
+.dark-container-non-transparent {
+    -fx-background-color: linear-gradient(to bottom, rgb(51, 51, 51) 50%, rgb(0, 0, 0) 100%);
+}
+
+.light-container, .choice-box .context-menu, .list-view .scroll-bar:vertical, .notification-bar > .pane, .root.custom-color-dialog, .scroll-pane .scroll-bar:vertical {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102, 0.9), rgb(0, 0, 0, 0.9));
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-radius: 5;
+}
+
+.cityView-container {
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+    -fx-background-color: rgba(51, 51, 51, 0.7);
+}
+
+.building-container {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-background-insets: 3;
+    -fx-border-radius: 20 20 20 20;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+}
+
+.building-listView-container {
+    -fx-background-insets: 0;
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-border-radius: 20 20 0 0;
+    -fx-background-radius: 20 20 0 0;
+    -fx-border-width: 4;
+}
+
+.buildIcons-container {
+    -fx-background-insets: 0.5;
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-radius: 20 20 20 20;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+}
+
+.building-stats-container {
+    -fx-background-insets: 0;
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-border-radius: 0 0 20 10;
+    -fx-background-radius: 0 0 20 20;
+}
+
+.buildIcon-popUp-container {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.lobby-list-label {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+}
+
+.text-area {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-text-fill: #FFFFFF;
+}
+
+.text-area .content {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-background-insets: -2;
+}
+
+.titled-pane .title {
+    -fx-background-color: rgb(51, 51, 51, 0.2) 50%;
+}
+
+.titled-pane .title .arrow-button .arrow {
+    -fx-background-color: black;
+    -fx-effect: none;
+}
+
+.titled-pane .content {
+    -fx-background-color: linear-gradient(to bottom, rgb(51, 51, 51, 0.2) 50%, rgb(10, 10, 10, 0.2) 100%);
+    -fx-border-color: linear-gradient(to bottom, rgb(51, 51, 51, 0.2) 50%, rgb(10, 10, 10, 0.2) 100%);
+}
+
+.titled-pane {
+    -fx-background-color: linear-gradient(to bottom, rgb(51, 51, 51, 0.9) 50%, rgb(10, 10, 10, 0.9) 100%);
+    -fx-background-insets: 2;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-border-radius: 4;
+}
+
+.round-image-container {
+    -fx-background-radius: 1000;
+    -fx-padding: 12;
+    -fx-background-color: linear-gradient(to top, rgb(102, 102, 102), rgb(50, 50, 50));
+}
+
+.avatar-image-container {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+    -fx-border-width: 4;
+}
+
+.resource-tooltip {
+    -fx-padding: 2;
+}
+
+#buttons-hbox {
+    -fx-alignment: center;
+}
+
+.districtContainer {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+    -fx-border-radius: 20 20 20 20;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+}
+
+.districtScrollContainer {
+    -fx-background-color: rgb(102, 102, 102);
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+}
+
+#square {
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-border-color: ffffff;
+    -fx-border-width: 3;
+}
+
+#castleViewBackButton, #closeTroopViewButton {
+    -fx-background-radius: 250em;
+    -fx-border-radius: 250em;
+    -fx-max-width: 5px;
+}
+
+#castleListView .list-cell:selected, #castleListView .list-cell:filled:hover {
+    -fx-background-color: rgb(0, 0, 0, 0.5)
+}
+
+#castleListView .list-cell:selected, #castleListView .list-cell:filled:hover {
+    -fx-background-color: rgb(0, 0, 0, 0.5)
+}
+
+.vBox-traitBox {
+    -fx-border-color: black;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 2px;
+}
+
+#availableTraitsList .list-cell:selected .vBox-traitBox, #availableTraitsList .list-cell:filled:hover .vBox-traitBox {
+    -fx-border-color: yellow;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 2px;
+}
+
+#ownedTraitsList .list-cell:selected .vBox-traitBox, #ownedTraitsList .list-cell:filled:hover .vBox-traitBox {
+    -fx-border-color: yellow;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 2px;
+}
+
+.enhancement-selected {
+    -fx-border-color: yellow;
+    -fx-border-width: 2;
+}
+
+.enhancement-not-selected {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.choiceBoxPrompt .label {
+    -fx-font-size: 16;
+    -fx-text-fill: #AAAAAA;
+}
+
+.choiceBoxNormal .label {
+    -fx-font-size: 16;
+    -fx-text-fill: #FFFFFF;
+}
+
+.choice-box .context-menu {
+    -fx-background-insets: 2;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-border-radius: 4;
+    -fx-spacing: 12;
+}
+
+#traitInformationVBox {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+}
+
+
+.custom-menu-button {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102, 0.9), rgb(0, 0, 0, 0.9));
+    -fx-text-fill: white; /* Text color */
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-border-radius: 3px; /* Rounded corners */
+}
+
+.custom-menu-button .label {
+    -fx-background-color: transparent; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-family: "Jaro"; /* Font family */
+    -fx-font-size: 16px; /* Font size */
+}
+
+.custom-menu-button .arrow-button {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102, 0.9), rgb(0, 0, 0, 0.9));
+    -fx-border-color: #000000; /* Border color of the arrow button */
+    -fx-border-width: 0 0 0 2px; /* Border width (only on the left side) */
+}
+
+.custom-menu-button .context-menu {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102, 0.9), rgb(0, 0, 0, 0.9));
+    -fx-pref-width: 220px; /* Preferred width of the MenuItem */
+    -fx-border-color: #000000; /* Match border color to background */
+    -fx-border-width: 1; /* Remove borders */
+}
+
+.custom-menu-button .menu-item {
+    -fx-background-color: transparent; /* Background color of the drop-down list */
+    -fx-text-fill: white; /* Text color of the drop-down list */
+    -fx-pref-width: 220px; /* Preferred width of the MenuItem */
+    -fx-padding: 5px; /* Padding inside the MenuItem */
+}
+
+.custom-menu-button .menu-item:hover {
+    -fx-background-color: #111111; /* Background color of the drop-down list on hover */
+}
+
+.custom-menu-button .arrow-button .arrow {
+    -fx-background-color: white; /* Background color of the arrow area */
+    -fx-shape: "M 0 0 L 5 5 L 10 0 Z"; /* Arrow shape */
+    -fx-scale-x: 1.5; /* Scale for arrow width */
+    -fx-scale-y: 1.5; /* Scale for arrow height */
+}
+
+.custom-progress-bar {
+    -fx-padding: 1; /* Remove padding */
+    -fx-background-color: transparent; /* Set background to transparent */
+    -fx-border-color: transparent; /* Set border to transparent */
+}
+
+.custom-progress-bar .track {
+    -fx-background-insets: 0; /* Remove track insets */
+    -fx-background-radius: 15; /* Remove border */
+}
+
+.custom-progress-bar .bar {
+    -fx-background-color: #66FF66; /* Bar background color */
+    -fx-background-insets: 0; /* Remove bar insets */
+    -fx-background-radius: 15; /* Remove border */
+}
+
+#eventInformationScrollPane .scroll-bar:vertical {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+}
+
+#eventInformationScrollPane .scroll-bar:vertical .thumb {
+    -fx-background-color: #FF8800;
+    -fx-background-radius: 5;
+}
+
+.enhancementBox {
+    -fx-font-size: 12;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-alignment: center;
+}
+
+.enhancementLabel {
+    -fx-font-size: 12;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+    -fx-alignment: center;
+}
+
+.craftsmanship {
+    -fx-text-fill: #9E6900;
+    -fx-border-color: #9E6900;
+}
+
+.construction {
+    -fx-text-fill: #7D7D7D;
+    -fx-border-color: #7D7D7D;
+}
+
+.production {
+    -fx-text-fill: #F7FF00;
+    -fx-border-color: #F7FF00;
+}
+
+.society {
+    -fx-text-fill: #006EAD;
+    -fx-border-color: #006EAD;
+}
+
+.state {
+    -fx-text-fill: #00F7FF;
+    -fx-border-color: #00F7FF;
+}
+
+.physics {
+    -fx-text-fill: #C24E97;
+    -fx-border-color: #C24E97;
+}
+
+.soldiery {
+    -fx-text-fill: #FF3C00;
+    -fx-border-color: #FF3C00;
+}
+
+.finances {
+    -fx-text-fill: #1D008F;
+    -fx-border-color: #1D008F;
+}
+
+.nature {
+    -fx-text-fill: #00A310;
+    -fx-border-color: #00A310;
+}
+
+.drive {
+    -fx-text-fill: #FCBE41;
+    -fx-border-color: #FCBE41;
+}
+
+.science {
+    -fx-text-fill: #FF66B3;
+    -fx-border-color: #FF66B3;
+}
+
+.force {
+    -fx-text-fill: #C20A0A;
+    -fx-border-color: #C20A0A;
+}
+
+.materials {
+    -fx-text-fill: #E0E0E0;
+    -fx-border-color: #E0E0E0;
+}
+
+.rare {
+    -fx-text-fill: #910186;
+    -fx-border-color: #910186;
+}
+
+.weaponry {
+    -fx-text-fill: #795b28;
+    -fx-border-color: #795b28;
+}
+
+.unitassembly {
+    -fx-text-fill: #462d00;
+    -fx-border-color: #462d00;
+}
+
+.small-container {
+    -fx-background-insets: 2;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+    -fx-spacing: 12;
+}
+
+.enhancementLabel-Medium {
+    -fx-font-size: 20;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+    -fx-alignment: center;
+}
+
+.enhancement-selected {
+    -fx-border-color: yellow;
+    -fx-border-width: 2;
+}
+
+.enhancement-not-selected {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+#enhancementsList .list-cell:selected .vBox-enhancementBox, #enhancementsList .list-cell:filled:hover .vBox-enhancementBox{
+    -fx-border-color: yellow;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 2px;
+}
+
+.health-bar .track {
+    -fx-background-color: #FF3333;
+}
+
+#contactsViewBackButton {
+    -fx-background-radius: 250em;
+    -fx-border-radius: 250em;
+    -fx-max-width: 5px;
+}
+
+#contactsList .list-cell:selected .hBox-contactsBox, #contactsList .list-cell:filled:hover .hBox-contactsBox {
+    -fx-border-color: yellow;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 2px;
+}
+
+.inferior, .pathetic {
+    -fx-text-fill: #009900;
+}
+
+.equal {
+    -fx-text-fill: #cccc00;
+}
+
+.superior, .overwhelming {
+    -fx-text-fill: #cc0000;
+}
+
+.vBox-emoji {
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+#emojiList .list-cell:selected .vBox-emoji, #emojiList .list-cell:filled:hover .vBox-emoji {
+    -fx-border-color: yellow;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 2px;
+}
+
+.fleet-container {
+    -fx-border-radius: 28;
+    -fx-background-radius: 28;
+    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(50, 50, 50));
+}
+
+.fleet-size-box {
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-width: 1;
+    -fx-border-color: #000000;
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+}
+
+.unit-box {
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-border-width: 1;
+    -fx-border-color: #000000;
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+}
+
+.health-bar .track {
+    -fx-background-color: #FF3333;
+}
+
+.selected, .list-cell:selected .list-view-selectable, .toggle-button-selectable:selected {
+    -fx-border-color: yellow;
+}
+
+.toggle-button-selectable:selected {
+    -fx-background-color: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+}

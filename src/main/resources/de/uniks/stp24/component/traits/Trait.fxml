@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root fx:id="traitBox" maxWidth="200.0" prefHeight="30.0" prefWidth="200.0" stylesheets="@../../styles.css"
+         type="VBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.traits.TraitComponent">
+    <AnchorPane maxHeight="-Infinity" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0"
+                prefWidth="200.0" stylesheets="@../../styles.css">
+        <Label fx:id="traitName" layoutX="14.0" layoutY="6.0" styleClass="small-medium" text="Label"/>
+        <ImageView fx:id="traitIcon" fitHeight="24.0" fitWidth="24.0" layoutX="176.0" layoutY="2.0" pickOnBounds="true"
+                   preserveRatio="true" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="5.0"
+                   AnchorPane.topAnchor="3.0"/>
+    </AnchorPane>
+    <styleClass>
+        <String fx:value="light-container"/>
+        <String fx:value="vBox-traitBox"/>
+    </styleClass>
+</fx:root>

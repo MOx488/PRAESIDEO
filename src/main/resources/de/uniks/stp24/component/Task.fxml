@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<fx:root alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="95.0" prefWidth="500.0"
+         style="-fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-insets: 1;"
+         stylesheets="@../styles.css" type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.TaskComponent">
+    <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="91.0"
+          prefWidth="432.0">
+        <HBox>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <Label fx:id="taskName" styleClass="small-large" text="Heatworks"/>
+        </HBox>
+        <HBox fx:id="jobDetailsBox" alignment="CENTER_LEFT" spacing="40.0">
+            <Label fx:id="taskType" styleClass="small-medium" text="Building"/>
+            <Label fx:id="systemName" styleClass="small-medium" text=" "/>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </HBox>
+        <StackPane alignment="CENTER_LEFT">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <HBox fx:id="progressHBox" alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="508.0" spacing="8.0"
+                  StackPane.alignment="CENTER_LEFT">
+                <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="310.0" progress="0.49"
+                             style="-fx-accent: green;" styleClass="custom-progress-bar"/>
+                <Label fx:id="progressPercentage" prefHeight="21.0" styleClass="small-medium" text="32.12.2024"
+                       HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <Label fx:id="inQueueLabel" styleClass="small-medium" text="In Queue"/>
+        </StackPane>
+    </VBox>
+    <Label fx:id="cancelTooltip" style="-fx-font-family: arial;" textFill="RED">
+        <font>
+            <Font name="Arial" size="36.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="crossImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+        </graphic>
+        <tooltip>
+            <Tooltip maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.9" prefHeight="80.0" prefWidth="150.0"
+                     style="-fx-border-color: black; -fx-border-width: 2;" styleClass="light-container">
+                <graphic>
+                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="10">
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <Text fx:id="tooltipText" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0"
+                                  styleClass="small-large"/>
+                        </HBox>
+                        <VBox fx:id="tooltipVBox" prefHeight="200.0" prefWidth="100.0">
+                            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10">
+                                <ImageView fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true"/>
+                                <Text fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-large"/>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </graphic>
+            </Tooltip>
+        </tooltip>
+    </Label>
+    <styleClass>
+        <String fx:value="container"/>
+        <String fx:value="light-container"/>
+    </styleClass>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</fx:root>

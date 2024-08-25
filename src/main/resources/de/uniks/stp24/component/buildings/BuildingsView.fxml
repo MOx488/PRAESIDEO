@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<fx:root prefHeight="400.0" prefWidth="400.0" type="BorderPane" xmlns="http://javafx.com/javafx/17.0.2-ea"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.buildings.BuildingsViewComponent">
+    <center>
+        <HBox alignment="CENTER" spacing="15.0" stylesheets="@../../styles.css">
+            <BorderPane.margin>
+                <Insets left="5.0" right="5.0"/>
+            </BorderPane.margin>
+            <VBox alignment="CENTER" prefHeight="380.0" prefWidth="199.0">
+                <Text fx:id="buildingsTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="%buildings.title"
+                      textAlignment="CENTER" wrappingWidth="199.08799743652344">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="medium-large"/>
+                        <String fx:value="underline"/>
+                    </styleClass>
+                </Text>
+                <VBox fx:id="buildingsVBox" alignment="TOP_CENTER" prefHeight="346.0" prefWidth="199.0"
+                      styleClass="building-container">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <ListView fx:id="buildingList" prefHeight="275.0" prefWidth="192.0"
+                              styleClass="building-listView-container"/>
+                </VBox>
+                <Button fx:id="destroyButton" alignment="CENTER" mnemonicParsing="false" onAction="#destroyBuilding"
+                        prefHeight="40.0" prefWidth="107.0" styleClass="castleView-button" text="%destroy.building"
+                        textAlignment="CENTER">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+            </VBox>
+            <VBox alignment="CENTER">
+                <VBox alignment="CENTER" prefHeight="300.0" prefWidth="176.0" styleClass="buildIcons-container">
+                    <GridPane fx:id="iconsMatrix" prefHeight="150.0" prefWidth="154.0" VBox.vgrow="ALWAYS">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.20001220703125" minWidth="10.0"
+                                               prefWidth="54.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="66.19996337890625" minWidth="10.0"
+                                               prefWidth="54.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.5999755859375" minWidth="10.0"
+                                               prefWidth="54.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints maxHeight="58.799981689453126" minHeight="10.0" prefHeight="54.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="78.8" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="57.59999389648438" minHeight="10.0" prefHeight="54.0"
+                                            vgrow="SOMETIMES"/>
+                            <RowConstraints maxHeight="57.59999389648438" minHeight="10.0" prefHeight="54.0"
+                                            vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <SplitPane style="-fx-background-color: transparent;">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.columnIndex="1">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.columnIndex="2">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.rowIndex="1">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.columnIndex="2"
+                                   GridPane.rowIndex="1">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.rowIndex="2">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="2">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0" styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane style="-fx-background-color: transparent;" GridPane.columnIndex="2"
+                                   GridPane.rowIndex="2">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0"
+                                  styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                        <SplitPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;"
+                                   GridPane.rowIndex="3">
+                            <VBox alignment="CENTER" onMouseClicked="#clickedBuildIcon" prefHeight="200.0"
+                                  prefWidth="100.0"
+                                  styleClass="vBox-buildIcon">
+                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true"/>
+                            </VBox>
+                        </SplitPane>
+                    </GridPane>
+                    <Label fx:id="buildingErrorLabel" text="No building selected">
+                        <styleClass>
+                            <String fx:value="error"/>
+                            <String fx:value="small"/>
+                        </styleClass>
+                    </Label>
+                    <HBox alignment="CENTER" prefHeight="44.0" prefWidth="168.0" VBox.vgrow="ALWAYS">
+                        <Button fx:id="buildButton" alignment="TOP_CENTER" mnemonicParsing="false"
+                                onAction="#buildBuilding" prefHeight="40.0" prefWidth="112.0"
+                                styleClass="castleView-button" text="%build.building" textAlignment="CENTER">
+                            <font>
+                                <Font size="13.0"/>
+                            </font>
+                        </Button>
+                    </HBox>
+                    <padding>
+                        <Insets top="10.0"/>
+                    </padding>
+                </VBox>
+            </VBox>
+        </HBox>
+    </center>
+</fx:root>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<fx:root fillWidth="false" prefWidth="212.0" styleClass="building-stats-container" stylesheets="@../../styles.css"
+         type="VBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.buildings.BuildingStatsViewComponent">
+    <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="40.0" prefWidth="212.0" VBox.vgrow="ALWAYS">
+        <Label fx:id="buildingNameLabel" styleClass="small-medium">
+            <HBox.margin>
+                <Insets left="5.0"/>
+            </HBox.margin>
+        </Label>
+    </HBox>
+    <VBox>
+        <HBox alignment="CENTER_LEFT" fillHeight="false" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <Label fx:id="upKeepLabel" styleClass="small-medium" text="%building.upkeep">
+                <HBox.margin>
+                    <Insets left="5.0"/>
+                </HBox.margin>
+            </Label>
+        </HBox>
+        <HBox fx:id="upKeepHBox">
+            <VBox.margin>
+                <Insets left="5.0"/>
+            </VBox.margin>
+        </HBox>
+    </VBox>
+    <VBox>
+        <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="24.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <Label fx:id="productionLabel" styleClass="small-medium" text="%building.production">
+                <HBox.margin>
+                    <Insets left="5.0"/>
+                </HBox.margin>
+            </Label>
+        </HBox>
+        <HBox fx:id="productionHBox">
+            <VBox.margin>
+                <Insets left="5.0"/>
+            </VBox.margin>
+        </HBox>
+    </VBox>
+</fx:root>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<fx:root alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="470.0" minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="80.0" prefWidth="470.0" spacing="2.0" stylesheets="@../styles.css" type="javafx.scene.layout.HBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.ShipComponent">
+    <HBox maxHeight="50.0" maxWidth="50.0" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 1;"
+          styleClass="container">
+        <ImageView fx:id="shipImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true"/>
+    </HBox>
+    <Text fx:id="shipType" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-medium" text="Text"
+          wrappingWidth="87.7899398803711">
+        <HBox.margin>
+            <Insets left="2.0"/>
+        </HBox.margin>
+    </Text>
+    <HBox alignment="CENTER" prefHeight="90.0" prefWidth="90.0" spacing="2.0">
+        <Button fx:id="decrButton" mnemonicParsing="false" onAction="#decreaseAmount" styleClass="image-button">
+            <graphic>
+                <ImageView fx:id="imgViewDecrease" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true"
+                           preserveRatio="true"/>
+            </graphic>
+        </Button>
+        <Label fx:id="shipAmount" styleClass="small-large" text="0"/>
+        <Button fx:id="incrButton" mnemonicParsing="false" onAction="#increaseAmount" styleClass="image-button">
+            <graphic>
+                <ImageView fx:id="imgViewIncrease" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true"
+                           preserveRatio="true"/>
+            </graphic>
+        </Button>
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+    </HBox>
+    <Button fx:id="viewTroopButton" mnemonicParsing="false" styleClass="medium-button" text="Einheit ansehen">
+        <HBox.margin>
+            <Insets left="10.0"/>
+        </HBox.margin>
+    </Button>
+</fx:root>

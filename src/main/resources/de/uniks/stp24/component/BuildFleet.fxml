@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.*?>
+<fx:root fx:id="buildFleetRoot" pickOnBounds="false" spacing="3.0" stylesheets="@../styles.css"
+         type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.BuildFleetComponent">
+    <VBox maxHeight="544.0" maxWidth="520.0" pickOnBounds="false" prefHeight="544.0" prefWidth="520.0" spacing="5.0">
+        <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+        </padding>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+            <Text fx:id="buildFleetTitle" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-large"
+                  text="Build New Fleet" wrappingWidth="170.11001586914062"/>
+            <ChoiceBox fx:id="systemsChoiceBox" prefHeight="37.0" prefWidth="320.0" styleClass="custom-menu-button"
+                       stylesheets="@../styles.css"/>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+            <TextField fx:id="fleetName" alignment="CENTER" prefHeight="46.0" prefWidth="230.0"
+                       promptText="Name of Fleet">
+                <styleClass>
+                    <String fx:value="container"/>
+                    <String fx:value="light-container"/>
+                    <String fx:value="small-large"/>
+                </styleClass>
+            </TextField>
+        </HBox>
+        <ListView fx:id="shipsList" prefHeight="346.0" prefWidth="480.0">
+            <styleClass>
+                <String fx:value="container"/>
+                <String fx:value="light-container"/>
+            </styleClass>
+        </ListView>
+        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+            <Button fx:id="buildFleetButton" mnemonicParsing="false" onAction="#buildFleet" text="Build Fleet"/>
+        </HBox>
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="dark-container"/>
+        </styleClass>
+    </VBox>
+    <VBox fx:id="unitView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          pickOnBounds="false" prefHeight="544.0" prefWidth="250.0" spacing="10.0" visible="false">
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="dark-container"/>
+        </styleClass>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="244.0">
+            <HBox maxHeight="50.0" maxWidth="50.0" prefHeight="50.0" prefWidth="50.0" styleClass="container">
+                <ImageView fx:id="unitImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </ImageView>
+                <HBox.margin>
+                    <Insets left="5.0"/>
+                </HBox.margin>
+            </HBox>
+            <Text fx:id="unitName" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="Text"
+                  wrappingWidth="154.79000091552734">
+                <HBox.margin>
+                    <Insets left="3.0"/>
+                </HBox.margin>
+            </Text>
+            <VBox>
+                <HBox.margin>
+                    <Insets left="-10.0"/>
+                </HBox.margin>
+                <ImageView fx:id="cancelImage" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#closeUnitView"
+                           pickOnBounds="true" preserveRatio="true">
+                    <VBox.margin>
+                        <Insets top="2.0"/>
+                    </VBox.margin>
+                </ImageView>
+            </VBox>
+        </HBox>
+        <ScrollPane fx:id="unitScrollPane" maxWidth="238.0" prefHeight="385.0" prefWidth="230.0">
+            <VBox.margin>
+                <Insets left="5.0" top="30.0"/>
+            </VBox.margin>
+        </ScrollPane>
+    </VBox>
+</fx:root>

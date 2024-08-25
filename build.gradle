@@ -1,0 +1,146 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+    id 'org.openjfx.javafxplugin' version "$javaFxPluginVersion"
+    id 'com.github.johnrengelman.shadow' version "$shadowPluginVersion"
+}
+
+group projectGroup
+version projectVersion
+mainClassName = 'de.uniks.stp24.Main'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io'}
+}
+
+dependencies
+        {
+    implementation group: 'org.jetbrains', name: 'annotations', version: jetbrainsAnnotationsVersion
+
+    // Frameworks
+
+    implementation group: "org.fulib", name: "fulibFx", version: fulibFxVersion
+    annotationProcessor group: "org.fulib", name: "fulibFx-processor", version: fulibFxVersion
+    implementation group: "com.google.dagger", name: "dagger", version: daggerVersion
+    annotationProcessor group: "com.google.dagger", name: "dagger-compiler", version: daggerVersion
+
+    // JavaFX
+    implementation group: "fr.brouillard.oss", name: "cssfx", version: cssFxVersion
+    implementation group: "org.controlsfx", name: "controlsfx", version: controlFxVersion
+
+    // https://mvnrepository.com/artifact/com.github.robitschko/data-url
+    implementation group: "com.github.robtimus", name: "data-url", version: "2.0"
+
+    // jgrapht
+    implementation group: "org.jgrapht", name: "jgrapht-core", version: jgraphtVersion
+
+    // REST
+
+    implementation group: "com.squareup.retrofit2", name: "retrofit", version: retrofitVersion
+    implementation group: "com.squareup.retrofit2", name: "adapter-rxjava3", version: retrofitVersion
+    implementation group: "com.squareup.retrofit2", name: "converter-jackson", version: retrofitVersion
+
+    implementation group: "com.fasterxml.jackson.core", name: "jackson-core", version: jacksonVersion
+
+    implementation group: "io.reactivex.rxjava3", name: "rxjava", version: rxJavaVersion
+
+    // WebSocket
+
+    implementation group: "jakarta.websocket", name: "jakarta.websocket-api", version: jakartaWebSocketVersion
+    implementation group: "org.glassfish.tyrus.bundles", name: "tyrus-standalone-client", version: tyrusVersion
+    implementation group: "org.glassfish.tyrus", name: "tyrus-client", version: tyrusVersion
+    implementation group: "org.glassfish.tyrus", name: "tyrus-container-grizzly-client", version: tyrusVersion
+
+    // Discord GameSDK
+    implementation 'com.github.immails:discord-game-sdk4j:master-SNAPSHOT'
+
+
+    // Testing
+    implementation 'junit:junit:4.12'
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitJupiterVersion
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitJupiterVersion
+
+    testImplementation group: 'org.testfx', name: 'testfx-junit5', version: testFxVersion
+    testImplementation group: 'org.testfx', name: 'openjfx-monocle', version: monocleVersion
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoVersion
+    testImplementation group: 'org.hamcrest', name: 'hamcrest', version: hamcrestVersion
+    testImplementation group: 'org.jmockit', name: 'jmockit', version: jmockitVersion
+
+    testAnnotationProcessor group: 'com.google.dagger', name: 'dagger-compiler', version: daggerVersion
+}
+
+java {
+    sourceCompatibility = getVersionForMajor(javaSourceVersion)
+    targetCompatibility = getVersionForMajor(javaTargetVersion)
+}
+
+static JavaVersion getVersionForMajor(String version) {
+    return JavaVersion.values().find { (it.majorVersion == version) }
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+    options.sourcepath = sourceSets.main.resources.getSourceDirectories()
+}
+
+javafx {
+    version = javaFxVersion
+    modules = ['javafx.controls', 'javafx.graphics', 'javafx.fxml', 'javafx.media', 'javafx.swing' /* <- */]
+    if (project.hasProperty('platform')) {
+        platform = project.platform
+    }
+}
+
+shadowJar {
+    archiveClassifier = project.findProperty('platform') ?: 'all'
+}
+
+jacoco {
+    toolVersion = jacocoVersion
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "de.uniks.stp24.Main"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+jacocoTestReport {
+    reports.xml.required = true
+}
+
+test {
+
+    configure {
+        jvmArgs = ['-Xmx2g']
+    }
+
+    useJUnitPlatform()
+    jvmArgs "-javaagent:${classpath.find { it.name.contains("jmockit") }.absolutePath}"
+
+    testLogging {
+        exceptionFormat = 'full'
+        showStackTraces = true
+    }
+
+    if (getProperty('headless') == "true" || System.getenv('CI')) {
+        systemProperties = [
+                'java.awt.headless': 'true',
+                'testfx.robot'     : 'glass',
+                'testfx.headless'  : 'true',
+                'glass.platform'   : 'Monocle',
+                'monocle.platform' : 'Headless',
+                'prism.order'      : 'sw',
+                'prism.text'       : 't2k',
+        ]
+    }
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root fx:id="resourceBarRoot" alignment="TOP_RIGHT" fillHeight="false" maxHeight="1.7976931348623157E308"
+         maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="1200.0" prefHeight="84.0"
+         styleClass="light-container" stylesheets="@../styles.css" type="HBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.ResourceBarComponent">
+    <HBox alignment="CENTER_RIGHT" prefHeight="97.0" spacing="1.0" HBox.hgrow="ALWAYS">
+        <HBox.margin>
+            <Insets left="150.0"/>
+        </HBox.margin>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="energyImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true"/>
+            <Label fx:id="energy" textAlignment="CENTER" textFill="#ff8000" VBox.vgrow="ALWAYS"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="mineralsImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true"/>
+            <Label fx:id="minerals" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="foodImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true"/>
+            <Label fx:id="food" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="researchImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true"/>
+            <Label fx:id="research" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="fuelImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true"/>
+            <Label fx:id="fuel" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="creditsImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true"/>
+            <Label fx:id="credits" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="consumerGoodsImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <Label fx:id="consumer_goods" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="alloysImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true"/>
+            <Label fx:id="alloys" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+        <Pane maxWidth="35.0" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" minWidth="60.0">
+            <ImageView fx:id="populationImage" fitHeight="49.0" fitWidth="78.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <Label fx:id="population" textAlignment="CENTER" textFill="#ff8000"/>
+        </VBox>
+    </HBox>
+    <Pane HBox.hgrow="ALWAYS"/>
+    <HBox alignment="CENTER" minHeight="84.0" minWidth="300.0" spacing="20.0" HBox.hgrow="ALWAYS">
+        <ToggleButton fx:id="slowToggleButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0">
+            <toggleGroup>
+                <ToggleGroup fx:id="gameSpeedControls"/>
+            </toggleGroup>
+            <graphic>
+                <ImageView fx:id="slowImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true"/>
+            </graphic>
+        </ToggleButton>
+        <ToggleButton fx:id="mediumToggleButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                      toggleGroup="$gameSpeedControls">
+            <graphic>
+                <ImageView fx:id="mediumImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                           preserveRatio="true"/>
+            </graphic>
+        </ToggleButton>
+        <ToggleButton fx:id="fastToggleButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                      toggleGroup="$gameSpeedControls">
+            <graphic>
+                <ImageView fx:id="fastImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true"/>
+            </graphic>
+        </ToggleButton>
+        <ToggleButton fx:id="pauseToggleButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                      toggleGroup="$gameSpeedControls">
+            <graphic>
+                <ImageView fx:id="pauseImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                           preserveRatio="true"/>
+            </graphic>
+        </ToggleButton>
+    </HBox>
+    <HBox alignment="CENTER" fillHeight="false" minHeight="84.0" HBox.hgrow="ALWAYS">
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="50.0"
+              style="-fx-border-color: #ff8000; -fx-border-width: 3;">
+            <padding>
+                <Insets left="10.0" right="10.0"/>
+            </padding>
+            <Label fx:id="dateLabel" styleClass="small-large" text="16.07.504"/>
+        </HBox>
+    </HBox>
+    <Button fx:id="escButton" minHeight="37.0" minWidth="53.0" mnemonicParsing="false" onAction="#onEsc"
+            prefHeight="37.0" prefWidth="53.0" styleClass="esc-button" text="Esc" HBox.hgrow="ALWAYS">
+        <font>
+            <Font size="8.0"/>
+        </font>
+        <HBox.margin>
+            <Insets right="20.0" top="5.0"/>
+        </HBox.margin>
+    </Button>
+</fx:root>

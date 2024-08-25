@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0"
+         prefWidth="1098.0" stylesheets="@../styles.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.CastleViewComponent">
+    <VBox fx:id="buildingsDistrictsContainer" alignment="CENTER" prefHeight="841.0" prefWidth="860.0" spacing="10.0"
+          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+          AnchorPane.topAnchor="75.0">
+        <HBox alignment="CENTER_LEFT" prefHeight="457.0" prefWidth="890.0" spacing="25.0" VBox.vgrow="ALWAYS">
+            <HBox fx:id="castleViewDistrictBuildingContainer" alignment="CENTER" prefHeight="400.0" prefWidth="890.0"
+                  styleClass="cityView-container" HBox.hgrow="ALWAYS">
+                <AnchorPane fx:id="districtsContainer" prefHeight="550.0" prefWidth="800.0"/>
+                <AnchorPane fx:id="buildingsContainer" prefHeight="550.0" prefWidth="606.0"/>
+            </HBox>
+            <AnchorPane fx:id="statisticsContainer" prefHeight="457.0" prefWidth="199.0"/>
+        </HBox>
+
+        <Pane fx:id="exploreCastleContainer" prefHeight="110.0"/>
+    </VBox>
+    <Button fx:id="castleViewBackButton" layoutX="15.0" mnemonicParsing="false" styleClass="back-button"
+            AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0">
+        <graphic>
+            <ImageView fx:id="castleViewBackImage" fitHeight="50.0" fitWidth="25.0" pickOnBounds="true"
+                       preserveRatio="true">
+            </ImageView>
+        </graphic>
+    </Button>
+    <HBox fx:id="castleNameContainer" alignment="CENTER" layoutX="334.0" AnchorPane.topAnchor="50.0">
+        <styleClass>
+            <String fx:value="light-container"/>
+            <String fx:value="container"/>
+        </styleClass>
+        <Label fx:id="castleNameLabel" style="-fx-text-fill: FF8000;" styleClass="medium-large" text="Neuschwanstein"
+               HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+</fx:root>

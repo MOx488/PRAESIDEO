@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root type="BorderPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.districts.DistrictComponent">
+    <center>
+        <VBox fx:id="districtRoot" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="479.0" prefWidth="514.0" stylesheets="@../../styles.css">
+            <Label text="%districts">
+                <styleClass>
+                    <String fx:value="medium-large"/>
+                    <String fx:value="underline"/>
+                </styleClass>
+            </Label>
+            <ListView fx:id="districtList" styleClass="districtScrollContainer"/>
+            <HBox alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="600.0">
+                <Button fx:id="districtDestroyButton" alignment="TOP_CENTER" mnemonicParsing="false"
+                        onMouseClicked="#destroyDistrict" prefHeight="40.0" prefWidth="110.0"
+                        styleClass="castleView-button" text="%districts.destroy" textAlignment="CENTER"/>
+                <Pane prefHeight="67.0" prefWidth="87.0" HBox.hgrow="ALWAYS"/>
+                <SplitPane fx:id="districtBuildTooltipOwner" style="-fx-background-color: transparent;">
+                    <Button fx:id="districtBuildButton" alignment="TOP_CENTER" mnemonicParsing="false"
+                            onMouseClicked="#buildDistrict" prefHeight="40.0" prefWidth="110.0"
+                            styleClass="castleView-button" text="%districts.build" textAlignment="CENTER"/>
+                </SplitPane>
+            </HBox>
+            <padding>
+                <Insets left="5.0"/>
+            </padding>
+        </VBox>
+    </center>
+</fx:root>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<fx:root fx:id="declareWarRoot" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="784.0" prefWidth="1280.0"
+         stylesheets="@../../styles.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.war.DeclareWarComponent">
+    <HBox alignment="CENTER" layoutX="557.0" layoutY="58.0" AnchorPane.topAnchor="58.0">
+        <styleClass>
+            <String fx:value="light-container"/>
+            <String fx:value="container"/>
+        </styleClass>
+        <Label fx:id="declareWarTitle" style="-fx-text-fill: FF8000;" styleClass="medium-large" text="Declare War"/>
+    </HBox>
+    <Pane layoutX="242.0" layoutY="107.0" prefHeight="489.0" prefWidth="795.0">
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="dark-container"/>
+        </styleClass>
+        <VBox fx:id="empireBox" layoutX="73.0" layoutY="38.0" prefHeight="149.0" prefWidth="100.0"
+              styleClass="avatar-image-container">
+            <ImageView fx:id="empireImage" fitHeight="150.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true"/>
+        </VBox>
+        <VBox fx:id="enemyBox" layoutX="619.0" layoutY="38.0" prefHeight="149.0" prefWidth="100.0"
+              styleClass="avatar-image-container">
+            <ImageView fx:id="enemyImage" fitHeight="150.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true"/>
+        </VBox>
+        <VBox layoutX="191.0" layoutY="92.0" prefHeight="83.0" prefWidth="66.0">
+            <ImageView fx:id="ownFlag" fitHeight="84.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true"/>
+        </VBox>
+        <VBox layoutX="537.0" layoutY="100.0" prefHeight="83.0" prefWidth="66.0">
+            <ImageView fx:id="enemyFlag" fitHeight="84.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true"/>
+        </VBox>
+        <Label fx:id="attackerLabel" layoutX="95.0" layoutY="17.0" styleClass="medium" text="Attacker"/>
+        <Label fx:id="defenderLabel" layoutX="638.0" layoutY="17.0" styleClass="medium" text="Defender"/>
+        <Label layoutX="379.0" layoutY="92.0" styleClass="medium-large" text="vs."/>
+        <TabPane fx:id="warReasonTabPane" layoutX="149.0" layoutY="226.0" prefHeight="244.0" prefWidth="481.0"
+                 stylesheets="@../../styles.css" tabClosingPolicy="UNAVAILABLE">
+            <Tab fx:id="conquestTab" closable="false" text="Conquest">
+                <Pane prefHeight="199.0" prefWidth="476.0">
+                    <ImageView fx:id="conquestImage" fitHeight="160.0" fitWidth="160.0" layoutX="158.0" layoutY="17.0"
+                               pickOnBounds="true" preserveRatio="true"/>
+                </Pane>
+            </Tab>
+            <Tab fx:id="plunderTab" closable="false" text="Plunder">
+                <Pane>
+                    <ImageView fx:id="plunderImage" fitHeight="160.0" fitWidth="300.0" layoutX="88.0" layoutY="17.0"
+                               pickOnBounds="true" preserveRatio="true"/>
+                </Pane>
+            </Tab>
+            <Tab fx:id="vengeanceTab" closable="false" text="Vengeance">
+                <Pane>
+                    <ImageView fx:id="vengeanceImage" fitHeight="160.0" fitWidth="300.0" layoutX="88.0" layoutY="17.0"
+                               pickOnBounds="true" preserveRatio="true"/>
+                </Pane>
+            </Tab>
+            <Tab fx:id="funTab" closable="false" text="Fun">
+                <Pane>
+                    <ImageView fx:id="funImage" fitHeight="160.0" fitWidth="160.0" layoutX="158.0" layoutY="17.0"
+                               pickOnBounds="true" preserveRatio="true"/>
+                </Pane>
+            </Tab>
+        </TabPane>
+        <Button fx:id="declareWarButton1" layoutX="645.0" layoutY="428.0" mnemonicParsing="false" onAction="#declareWar"
+                text="Declare War"/>
+        <TextField fx:id="warNameTextField" layoutX="307.0" layoutY="142.0">
+            <styleClass>
+                <String fx:value="container"/>
+                <String fx:value="light-container"/>
+            </styleClass>
+        </TextField>
+        <Button fx:id="backButton" layoutX="32.0" layoutY="428.0" mnemonicParsing="false" onAction="#back"
+                styleClass="back-button" text="Back"/>
+        <Label fx:id="enemyName" layoutX="627.0" layoutY="197.0" styleClass="medium" text="Label"/>
+        <Label fx:id="youLabel" layoutX="105.0" layoutY="197.0" styleClass="medium" text="Label"/>
+    </Pane>
+</fx:root>

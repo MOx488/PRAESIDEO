@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<fx:root fx:id="troopSizeRootBox" alignment="CENTER_LEFT" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity"
+         minHeight="-Infinity" minWidth="-Infinity" spacing="8.0" styleClass="fleet-size-box"
+         stylesheets="@../../styles.css" type="HBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.troopview.TroopSizeComponent">
+    <padding>
+        <Insets bottom="12.0" left="8.0" right="8.0" top="12.0"/>
+    </padding>
+    <HBox alignment="CENTER" style="-fx-border-color: black; -fx-border-width: 2;">
+        <ImageView fx:id="sizeImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"/>
+    </HBox>
+    <VBox alignment="CENTER_LEFT" spacing="4.0">
+        <Label fx:id="sizeTypeLabel" styleClass="medium" text="Scout"/>
+        <Label fx:id="actualSizeLabel" styleClass="medium" text="Actual: 1"/>
+        <Label fx:id="plannedSizeLabel" styleClass="medium" text="Planned: 3"/>
+    </VBox>
+</fx:root>

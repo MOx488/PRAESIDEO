@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<fx:root opacity="0.85" prefHeight="554.0" prefWidth="100.0" stylesheets="@../styles.css"
+         type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.StatisticsComponent">
+    <styleClass>
+        <String fx:value="cityView-container"/>
+        <String fx:value="dark-container"/>
+    </styleClass>
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="224.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium-large" text="%Statistics" underline="true">
+            </Text>
+            <VBox prefHeight="3.0" prefWidth="206.0" VBox.vgrow="ALWAYS">
+                <Line endX="100.0" startX="-100.0"/>
+            </VBox>
+            <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="TYPE:"
+                  textAlignment="CENTER" wrappingWidth="165.73858642578125">
+            </Text>
+            <Text fx:id="level" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="LEVEL:"
+                  textAlignment="CENTER" wrappingWidth="165.73858642578125">
+            </Text>
+            <Text fx:id="capacity" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="capacity"
+                  textAlignment="CENTER" wrappingWidth="150.338623046875">
+            </Text>
+            <Text fx:id="population" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="population"
+                  textAlignment="CENTER" wrappingWidth="183.73858642578125">
+            </Text>
+            <Label fx:id="healthToolTopLabel">
+                <graphic>
+                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <Text fx:id="health" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="health"
+                              textAlignment="CENTER" wrappingWidth="183.73858642578125"/>
+                        <HBox alignment="CENTER">
+                            <padding>
+                                <Insets left="10.0" right="10.0"/>
+                            </padding>
+                            <ProgressBar fx:id="healthBar" minHeight="15.0" prefHeight="15.0" prefWidth="150.0"
+                                         progress="0.49" style="-fx-accent: green;" styleClass="custom-progress-bar"/>
+                        </HBox>
+                    </VBox>
+                </graphic>
+                <tooltip>
+                    <Tooltip>
+                        <graphic>
+                            <HBox>
+                                <VBox alignment="CENTER_LEFT">
+                                    <Text fx:id="healthToolTipText1" fill="#ff8000" strokeType="OUTSIDE"
+                                          strokeWidth="0.0"
+                                          styleClass="medium" text="Text"/>
+                                    <HBox alignment="CENTER_LEFT">
+                                        <Text fx:id="healthToolTipText2" fill="#ff8000" strokeType="OUTSIDE"
+                                              strokeWidth="0.0" styleClass="medium" text="Text"/>
+                                        <ImageView fx:id="healthToolTipImage" fitHeight="20.0" fitWidth="20.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets left="5.0"/>
+                                            </HBox.margin>
+                                        </ImageView>
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                        </graphic>
+                    </Tooltip>
+                </tooltip>
+            </Label>
+            <Label fx:id="defenseToolTipLabel">
+                <graphic>
+                    <Text fx:id="defense" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="Defense"
+                          textAlignment="CENTER" wrappingWidth="183.73858642578125"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip>
+                        <graphic>
+                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                <VBox alignment="CENTER_LEFT">
+                                    <Text fx:id="defenseToolTipText1" fill="#ff8000" strokeType="OUTSIDE"
+                                          strokeWidth="0.0" styleClass="medium" text="Text"/>
+                                    <HBox alignment="CENTER_LEFT">
+                                        <Text fx:id="defenseToolTipText2" fill="#ff8000" strokeType="OUTSIDE"
+                                              strokeWidth="0.0" styleClass="medium" text="Text"/>
+                                        <ImageView fx:id="defenseToolTipImage" fitHeight="20.0" fitWidth="20.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets left="5.0"/>
+                                            </HBox.margin>
+                                        </ImageView>
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                        </graphic>
+                    </Tooltip>
+                </tooltip>
+            </Label>
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="energyImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true"
+                           preserveRatio="true">
+                </ImageView>
+                <Text fx:id="energy" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" wrappingWidth="60.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="mineralsImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true"
+                           preserveRatio="true">
+                </ImageView>
+                <Text fx:id="minerals" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" wrappingWidth="60.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="foodImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                </ImageView>
+                <Text fx:id="food" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" wrappingWidth="60.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="researchImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true"
+                           preserveRatio="true">
+
+                </ImageView>
+                <Text fx:id="research" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" wrappingWidth="60.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="fuelImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                </ImageView>
+                <Text fx:id="fuel" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" wrappingWidth="60.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="creditsImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true"
+                           preserveRatio="true">
+                </ImageView>
+                <Text fx:id="credits" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" wrappingWidth="60.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="alloysImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true"
+                           preserveRatio="true">
+                </ImageView>
+                <Text fx:id="alloys" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" wrappingWidth="60.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <ImageView fx:id="consumerGoodsImage" fitHeight="40.0" fitWidth="41.0" pickOnBounds="true"
+                           preserveRatio="true">
+                </ImageView>
+                <Text fx:id="consumer_goods" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium"
+                      wrappingWidth="60.0"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</fx:root>

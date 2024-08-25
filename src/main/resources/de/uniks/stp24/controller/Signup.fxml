@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" styleClass="default-background"
+            stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.uniks.stp24.controller.SignupController">
+    <VBox alignment="CENTER" fillWidth="false" layoutX="410.0" layoutY="202.0" AnchorPane.bottomAnchor="138.0"
+          AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="202.0">
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="460.0" prefWidth="380.0" spacing="12.0" style="-fx-border-color: black; -fx-border-width: 4;">
+            <Label alignment="CENTER" styleClass="large" text="%signup.title">
+                <font>
+                    <Font size="48.0"/>
+                </font>
+            </Label>
+            <VBox spacing="4.0">
+                <Label styleClass="medium" text="%username">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="usernameInput" promptText="%enter.username">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="light-container"/>
+                        <String fx:value="container"/>
+                    </styleClass>
+                </TextField>
+                <Label fx:id="nameError" text="username is taken" textFill="RED" visible="false">
+                    <styleClass>
+                        <String fx:value="small"/>
+                        <String fx:value="error"/>
+                    </styleClass>
+                </Label>
+            </VBox>
+            <VBox spacing="4.0">
+                <Label styleClass="medium" text="%password">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordInput" promptText="%enter.password">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="light-container"/>
+                        <String fx:value="container"/>
+                    </styleClass>
+                </PasswordField>
+                <VBox spacing="4.0">
+                    <Label styleClass="medium" text="%confirm.password">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Label>
+                    <PasswordField fx:id="confirmPasswordInput" promptText="%enter.password">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="TEXT"/>
+                        </cursor>
+                        <styleClass>
+                            <String fx:value="light-container"/>
+                            <String fx:value="container"/>
+                        </styleClass>
+                    </PasswordField>
+                    <Label fx:id="errorMessageLabel" text="Password" textFill="RED">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                        <styleClass>
+                            <String fx:value="small"/>
+                            <String fx:value="error"/>
+                        </styleClass>
+                    </Label>
+                </VBox>
+            </VBox>
+            <HBox>
+                <Region HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="backButton" cancelButton="true" mnemonicParsing="false" onAction="#backToLogin"
+                        styleClass="back-button" text="%back">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="signupButton" defaultButton="true" mnemonicParsing="false" onAction="#signup"
+                        text="%signup">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </HBox>
+            <padding>
+                <Insets left="40.0" right="40.0"/>
+            </padding>
+            <styleClass>
+                <String fx:value="dark-container"/>
+                <String fx:value="container"/>
+            </styleClass>
+        </VBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<fx:root alignment="TOP_CENTER" maxHeight="550.0" maxWidth="750.0" stylesheets="@../styles.css"
+         type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.BattleResult">
+    <HBox fx:id="mainResultHBox" alignment="CENTER" maxHeight="50.0" maxWidth="220.0" prefHeight="100.0"
+          prefWidth="100.0">
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="dark-container"/>
+        </styleClass>
+        <Text fx:id="mainResultTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium-large" text="Lost"
+              textAlignment="CENTER" wrappingWidth="219.86399841308594"/>
+    </HBox>
+    <VBox prefHeight="500.0" prefWidth="750.0">
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="dark-container"/>
+        </styleClass>
+        <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="744.0" spacing="10.0">
+            <Text fx:id="battle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium-large" text="Battel"
+                  textAlignment="CENTER" wrappingWidth="219.86399841308594"/>
+            <Text fx:id="battleText" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-large"
+                  text="You won a battle against " textAlignment="CENTER" wrappingWidth="453.86399841308594"/>
+            <VBox.margin>
+                <Insets bottom="40.0"/>
+            </VBox.margin>
+        </VBox>
+        <HBox alignment="CENTER" prefHeight="166.0" prefWidth="744.0" spacing="140.0">
+            <VBox fx:id="avatarContainerLeft" styleClass="avatar-image-container">
+                <ImageView fx:id="avatarLeft" fitHeight="168.0" fitWidth="107.0" pickOnBounds="true"
+                           preserveRatio="true"/>
+            </VBox>
+            <VBox spacing="3.0">
+                <VBox fx:id="avatarContainerMiddle" maxHeight="140.0" prefHeight="140.0"
+                      styleClass="avatar-image-container">
+                    <ImageView fx:id="avatarMiddle" fitHeight="140.0" fitWidth="100.0" pickOnBounds="true"
+                               preserveRatio="true"/>
+                </VBox>
+                <Text fx:id="enemyName" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium"
+                      text="Friede" textAlignment="CENTER" wrappingWidth="100.0"/>
+            </VBox>
+            <ImageView fx:id="flagImage" fitHeight="168.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true"/>
+            <VBox.margin>
+                <Insets bottom="40.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <Button fx:id="lobbyButton" mnemonicParsing="false" onAction="#lobbyButtonClicked" text="Return to Lobby"/>
+        </HBox>
+    </VBox>
+</fx:root>

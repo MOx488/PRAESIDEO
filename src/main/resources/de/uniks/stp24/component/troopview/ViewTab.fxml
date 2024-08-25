@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root fx:id="viewTabRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+         minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../../styles.css" type="AnchorPane"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.troopview.ViewTabComponent">
+    <HBox alignment="TOP_CENTER" layoutX="14.4" layoutY="37.4" spacing="40.0"
+          AnchorPane.bottomAnchor="91.19999999999999" AnchorPane.leftAnchor="14.4" AnchorPane.topAnchor="25.0">
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%size"/>
+            <ListView fx:id="sizeListView" prefHeight="300.0" prefWidth="200.0" styleClass="fleet-container">
+                <padding>
+                    <Insets bottom="8.0" left="6.0" right="12.0" top="8.0"/>
+                </padding>
+            </ListView>
+        </VBox>
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%units"/>
+            <ListView fx:id="unitsListView" prefHeight="300.0" prefWidth="200.0" styleClass="fleet-container">
+                <padding>
+                    <Insets bottom="8.0" left="6.0" right="12.0" top="8.0"/>
+                </padding>
+            </ListView>
+            <Region prefHeight="16.0" prefWidth="16.0"/>
+            <Button fx:id="destroyUnitButton" mnemonicParsing="false" onAction="#destroyUnit"
+                    styleClass="white-prompt-button" text="%destroy.troop"/>
+        </VBox>
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%focused.unit"/>
+            <Pane styleClass="fleet-container">
+                <ScrollPane fx:id="focusedUnitScrollPane" prefHeight="295.0" prefWidth="200.0"
+                            style="-fx-background-color: transparent;">
+                    <padding>
+                        <Insets bottom="8.0" left="20.0" right="20.0" top="8.0"/>
+                    </padding>
+                </ScrollPane>
+            </Pane>
+        </VBox>
+    </HBox>
+</fx:root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root fx:id="transferUnitsTabRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+         minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0"
+         stylesheets="@../../styles.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.troopview.TransferUnitsTabComponent">
+    <HBox alignment="TOP_CENTER" layoutX="14.4" layoutY="37.4" spacing="40.0"
+          AnchorPane.bottomAnchor="91.19999999999999" AnchorPane.leftAnchor="14.4" AnchorPane.topAnchor="25.0">
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%your.units"/>
+            <ListView fx:id="yourUnitsListView" prefHeight="300.0" prefWidth="200.0" styleClass="fleet-container">
+                <padding>
+                    <Insets bottom="8.0" left="6.0" right="12.0" top="8.0"/>
+                </padding>
+            </ListView>
+        </VBox>
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%transfer.to.troop"/>
+            <ListView fx:id="troopsListView" prefHeight="300.0" prefWidth="200.0" styleClass="fleet-container">
+                <padding>
+                    <Insets bottom="8.0" left="6.0" right="12.0" top="8.0"/>
+                </padding>
+            </ListView>
+            <Region prefHeight="16.0" prefWidth="16.0"/>
+            <Button fx:id="transferUnitButton" mnemonicParsing="false" onAction="#transferUnit"
+                    styleClass="white-prompt-button" text="%transfer.unit"/>
+        </VBox>
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%focused.troop"/>
+            <ListView fx:id="focusedTroopSizeListView" prefHeight="300.0" prefWidth="200.0"
+                      styleClass="fleet-container">
+                <padding>
+                    <Insets bottom="8.0" left="6.0" right="12.0" top="8.0"/>
+                </padding>
+            </ListView>
+        </VBox>
+    </HBox>
+</fx:root>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<fx:root fx:id="imageBox" maxHeight="30.0" maxWidth="25.0" minHeight="30.0" minWidth="25.0" prefHeight="30.0"
+         prefWidth="25.0" stylesheets="@../styles.css" type="SplitPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.FleetMapComponent">
+    <tooltip>
+        <Tooltip fx:id="fleetTooltip">
+            <graphic>
+                <VBox spacing="3.0">
+                    <HBox fx:id="enemyBox" alignment="CENTER_LEFT" spacing="3.0">
+                        <Circle fx:id="empireCircle" fill="WHITE" radius="8.0" stroke="BLACK" strokeType="INSIDE"/>
+                        <Label fx:id="enemyName" styleClass="small-medium" text="Label">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                    </HBox>
+                    <Label fx:id="fleetName" styleClass="small-medium" text="Label">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Label>
+                </VBox>
+            </graphic>
+        </Tooltip>
+    </tooltip>
+    <ImageView fx:id="fleetImage" fitHeight="26.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true"/>
+</fx:root>

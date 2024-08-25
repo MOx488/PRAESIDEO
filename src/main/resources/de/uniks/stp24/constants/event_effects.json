@@ -1,0 +1,290 @@
+{
+  "eventEffects": [
+    {
+      "id": "blizzard",
+      "type": 0,
+      "mtth": 400,
+      "duration": 15,
+      "effects": [
+        {
+          "variable": "energy",
+          "base": -50
+        },
+        {
+          "variable": "fuel",
+          "base": -50
+        }
+      ]
+    },
+    {
+      "id": "crop_failure",
+      "type": 0,
+      "mtth": 400,
+      "duration": 15,
+      "effects": [
+        {
+          "variable": "districts.agriculture.production.food",
+          "multiplier": 0
+        },
+        {
+          "variable": "buildings.farm.production.food",
+          "multiplier": 0
+        }
+      ]
+    },
+    {
+      "id": "earth_quake",
+      "type": 0,
+      "mtth": 500,
+      "duration": 15,
+      "effects": [
+        {
+          "variable": "buildings.farm.production.food",
+          "multiplier": 0.1
+        },
+        {
+          "variable": "buildings.refinery.production.fuel",
+          "multiplier": 0.1
+        },
+        {
+          "variable": "buildings.research_lab.production.research",
+          "multiplier": 0.1
+        },
+        {
+          "variable": "buildings.mine.production.minerals",
+          "multiplier": 0.1
+        },
+        {
+          "variable": "buildings.power_plant.production.energy",
+          "multiplier": 0.1
+        },
+        {
+          "variable": "buildings.exchange.production.credits",
+          "multiplier": 0.1
+        },
+        {
+          "variable": "credits",
+          "base": -40
+        }
+      ]
+    },
+    {
+      "id": "inflation",
+      "type": 0,
+      "mtth": 350,
+      "duration": 15,
+      "effects": [
+        {
+          "variable": "empire.market.fee",
+          "multiplier": 1.5
+        }
+      ]
+    },
+    {
+      "id": "thirst_for_knowledge",
+      "type": 0,
+      "mtth": 500,
+      "duration": 30,
+      "effects": [
+        {
+          "variable": "credits",
+          "base": -50
+        },
+        {
+          "variable": "technologies.physics.cost_multiplier",
+          "multiplier": 0.8
+        },
+        {
+          "variable": "technologies.engineering.cost_multiplier",
+          "multiplier": 0.8
+        },
+        {
+          "variable": "technologies.society.cost_multiplier",
+          "multiplier": 0.8
+        }
+      ]
+    },
+    {
+      "id": "mysterious_liquid",
+      "type": 1,
+      "mtth": 300,
+      "duration": 20,
+      "effects_accept": [
+        [
+          {
+            "variable": "districts.industry.production.consumer_goods",
+            "multiplier": 1.5
+          },
+          {
+            "variable": "districts.ancient_factory.production.consumer_goods",
+            "multiplier": 1.5
+          },
+          {
+            "variable": "buildings.factory.production.consumer_goods",
+            "multiplier": 1.5
+          }
+        ],
+        [
+          {
+            "variable": "districts.industry.production.consumer_goods",
+            "multiplier": 0
+          },
+          {
+            "variable": "districts.ancient_factory.production.consumer_goods",
+            "multiplier": 0
+          },
+          {
+            "variable": "buildings.factory.production.consumer_goods",
+            "multiplier": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "group",
+      "type": 1,
+      "duration": 20,
+      "mtth": 300,
+      "effects_accept": [
+        [
+          {
+            "variable": "credits",
+            "base": 30
+          },
+          {
+            "variable": "minerals",
+            "base": 30
+          },
+          {
+            "variable": "alloys",
+            "base": 30
+          },
+          {
+            "variable": "food",
+            "base": 30
+          }
+        ],
+        [
+          {
+            "variable": "credits",
+            "base": -30
+          },
+          {
+            "variable": "minerals",
+            "base": -30
+          },
+          {
+            "variable": "alloys",
+            "base": -30
+          },
+          {
+            "variable": "food",
+            "base": -30
+          }
+        ]
+      ]
+    },
+    {
+      "id": "marriage",
+      "type": 1,
+      "duration": 20,
+      "mtth": 300,
+      "effects_accept": [
+        [
+          {
+            "variable": "systems.colonized.cost.minerals",
+            "multiplier": 0.8
+          },
+          {
+            "variable": "systems.colonized.cost.energy",
+            "multiplier": 0.8
+          },
+          {
+            "variable": "systems.upgraded.cost.minerals",
+            "multiplier": 0.8
+          },
+          {
+            "variable": "systems.upgraded.cost.alloys",
+            "multiplier": 0.8
+          },
+          {
+            "variable": "systems.developed.cost.alloys",
+            "multiplier": 0.8
+          },
+          {
+            "variable": "systems.developed.cost.fuel",
+            "multiplier": 0.8
+          }
+        ],
+        [
+          {
+            "variable": "systems.colonized.cost.minerals",
+            "multiplier": 1.2
+          },
+          {
+            "variable": "systems.colonized.cost.energy",
+            "multiplier": 1.2
+          },
+          {
+            "variable": "systems.upgraded.cost.minerals",
+            "multiplier": 1.2
+          },
+          {
+            "variable": "systems.upgraded.cost.alloys",
+            "multiplier": 1.2
+          },
+          {
+            "variable": "systems.developed.cost.alloys",
+            "multiplier": 1.2
+          },
+          {
+            "variable": "systems.developed.cost.fuel",
+            "multiplier": 1.2
+          }
+        ]
+      ]
+    },
+    {
+      "id": "scientific_breakthrough",
+      "type": 0,
+      "duration": 20,
+      "mtth": 400,
+      "effects": [
+        {
+          "variable": "research",
+          "base": 50
+        }
+      ]
+    },
+    {
+      "id": "treasure",
+      "type": 0,
+      "duration": 5,
+      "mtth": 350,
+      "effects": [
+        {
+          "variable": "credits",
+          "base": 60
+        }
+      ]
+    },
+    {
+      "id": "resignation.physics",
+      "type": 2,
+      "duration": 0,
+      "mtth": 500
+    },
+    {
+      "id": "resignation.society",
+      "type": 2,
+      "duration": 0,
+      "mtth": 500
+    },
+    {
+      "id": "resignation.engineering",
+      "type": 2,
+      "duration": 0,
+      "mtth": 500
+    }
+  ]
+}

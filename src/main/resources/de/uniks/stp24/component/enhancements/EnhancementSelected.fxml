@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root prefHeight="540.0" prefWidth="300.0" spacing="10.0" stylesheets="@../../styles.css" type="VBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.enhancements.EnhancementSelectedComponent">
+    <padding>
+        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+    </padding>
+    <styleClass>
+        <String fx:value="container"/>
+        <String fx:value="dark-container"/>
+    </styleClass>
+    <HBox prefHeight="0.0" prefWidth="274.0" spacing="10.0">
+        <Label maxWidth="1.7976931348623157E308" styleClass="small-large" stylesheets="@../../styles.css"
+               text="%selected.Enhancement" HBox.hgrow="ALWAYS"/>
+        <ImageView fx:id="selectedCross" fitHeight="26.0" fitWidth="26.0" onMouseClicked="#onCrossClicked"
+                   pickOnBounds="true" preserveRatio="true"/>
+    </HBox>
+    <VBox fx:id="selectedEnhancementText" VBox.vgrow="ALWAYS"/>
+    <HBox alignment="CENTER" prefHeight="80.0" prefWidth="274.0">
+        <SplitPane fx:id="tooltipBackground" style="-fx-background-color: transparent;">
+            <tooltip>
+                <Tooltip>
+                    <graphic>
+                        <VBox fx:id="unlockTooltip" prefHeight="200.0"/>
+                    </graphic>
+                </Tooltip>
+            </tooltip>
+            <Button fx:id="unlockButton" mnemonicParsing="false" onAction="#unlockEnhancement">
+                <graphic>
+                    <VBox prefHeight="0.0" prefWidth="100.0">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                            <Label maxWidth="1.7976931348623157E308" text="%unlock" textAlignment="CENTER"/>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="100.0" spacing="10.0">
+                            <ImageView fx:id="costImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                       preserveRatio="true"/>
+                            <Label fx:id="costLabel"/>
+                        </HBox>
+                    </VBox>
+                </graphic>
+            </Button>
+        </SplitPane>
+    </HBox>
+</fx:root>

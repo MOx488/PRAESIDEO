@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import java.lang.String?>
+<fx:root alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="250.0" prefWidth="200.0" stylesheets="@../styles.css" type="VBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.TroopsListComponent">
+    <styleClass>
+        <String fx:value="container"/>
+        <String fx:value="light-container"/>
+    </styleClass>
+    <Label styleClass="medium-large" text="%fleets">
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
+        <padding>
+            <Insets bottom="-8.0"/>
+        </padding>
+    </Label>
+    <Line endX="48.0" startX="-150.0" strokeWidth="2.0">
+        <VBox.margin>
+            <Insets bottom="-12.0"/>
+        </VBox.margin>
+    </Line>
+    <ListView fx:id="fleetsListView" styleClass="transparent" VBox.vgrow="ALWAYS"/>
+</fx:root>

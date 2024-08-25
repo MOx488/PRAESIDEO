@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<fx:root mnemonicParsing="false" style="-fx-background-insets: 0;" stylesheets="@../styles.css" type="ToggleButton"
+         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.HomeSystemComponent">
+    <graphic>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="59.0" prefWidth="164.0">
+            <Label fx:id="typeLabel" styleClass="medium" text="Ancient Enhancements"/>
+            <Label fx:id="capacityLabel" styleClass="medium" text="%capacity.range"/>
+        </VBox>
+    </graphic>
+    <styleClass>
+        <String fx:value="unit-box"/>
+        <String fx:value="toggle-button-selectable"/>
+    </styleClass>
+</fx:root>

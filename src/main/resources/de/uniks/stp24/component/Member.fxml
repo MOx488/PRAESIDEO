@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<fx:root alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="35.0" prefWidth="200.0" type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.MemberComponent">
+    <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="135.0" spacing="10.0">
+        <ImageView fx:id="playerAvatar" fitHeight="35.0" fitWidth="35.0"/>
+        <Label fx:id="playerName" styleClass="medium" text="\%PlayerName"/>
+    </HBox>
+    <ImageView fx:id="memberStatusImage" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+</fx:root>

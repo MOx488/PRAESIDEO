@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane minHeight="800.0" minWidth="1200.0" styleClass="default-background" stylesheets="@../styles.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.uniks.stp24.controller.EditGameController">
+    <VBox alignment="CENTER" fillWidth="false" layoutX="400.0" layoutY="181.0"
+          AnchorPane.bottomAnchor="120.33333333333337" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0"
+          AnchorPane.topAnchor="181.0">
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="500.0" prefWidth="400.0" spacing="12.0" style="-fx-border-color: black; -fx-border-width: 4;">
+            <Label alignment="CENTER" styleClass="large" text="%edit.game.title">
+                <font>
+                    <Font name="System Bold" size="50.0"/>
+                </font>
+            </Label>
+            <VBox alignment="CENTER" spacing="4.0">
+                <Label styleClass="medium" text="Name">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="gameNameField" alignment="CENTER" promptText="%new.game.title" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                </TextField>
+                <HBox alignment="TOP_RIGHT">
+                    <styleClass>
+                        <String fx:value="small"/>
+                        <String fx:value="error"/>
+                    </styleClass>
+                    <Label fx:id="errorServerLabel" text="Error" textFill="RED" visible="false">
+                        <styleClass>
+                            <String fx:value="small"/>
+                            <String fx:value="error"/>
+                        </styleClass>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox alignment="CENTER" spacing="4.0">
+                <Label styleClass="medium" text="%password">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordField" alignment="CENTER" promptText="%new.password">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                </PasswordField>
+                <VBox spacing="4.0"/>
+            </VBox>
+            <VBox alignment="CENTER">
+                <Label styleClass="medium" text="%map.size">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="mapSizeBox" prefHeight="39.0" prefWidth="387.0">
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                        <String fx:value="choiceBoxNormal"/>
+                    </styleClass>
+                </ChoiceBox>
+            </VBox>
+            <Label fx:id="errorLabel" text="Error" textFill="RED">
+                <styleClass>
+                    <String fx:value="small"/>
+                    <String fx:value="error"/>
+                </styleClass>
+            </Label>
+            <HBox alignment="CENTER">
+                <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false" onAction="#cancel"
+                        styleClass="back-button" text="%cancel">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Button>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="updateButton" defaultButton="true" mnemonicParsing="false" onAction="#update"
+                        text="%update" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="30.0"/>
+                    </font>
+                </Button>
+            </HBox>
+            <styleClass>
+                <String fx:value="container"/>
+                <String fx:value="dark-container"/>
+            </styleClass>
+            <padding>
+                <Insets bottom="12.0" left="32.0" right="32.0" top="12.0"/>
+            </padding>
+        </VBox>
+    </VBox>
+</AnchorPane>

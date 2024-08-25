@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane minHeight="715.0" minWidth="1200.0" prefHeight="715.0" prefWidth="1200.0" styleClass="default-background"
+            stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.uniks.stp24.controller.LobbyController">
+    <ImageView fx:id="userSettingsButton" fitHeight="40.0" fitWidth="40.0" layoutX="1146.0" layoutY="14.0"
+               onMouseClicked="#openUserSettings" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="28.0"
+               AnchorPane.topAnchor="28.0">
+        <Image url="@../image/gear-solid.png"/>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </ImageView>
+    <VBox alignment="CENTER" fillWidth="false" layoutX="63.2" layoutY="135.1999969482422" prefHeight="550.0"
+          prefWidth="1108.0" AnchorPane.bottomAnchor="79.80000000000007" AnchorPane.leftAnchor="63.200000000000045"
+          AnchorPane.rightAnchor="28.799999999999955" AnchorPane.topAnchor="84.60000000000002">
+        <HBox alignment="TOP_CENTER" prefHeight="550.0" prefWidth="1108.0" spacing="20.0">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="550.0" prefWidth="706.0" spacing="10.0">
+                <styleClass>
+                    <String fx:value="container"/>
+                    <String fx:value="dark-container"/>
+                </styleClass>
+                <Label styleClass="large" text="%games">
+                    <font>
+                        <Font size="40.0"/>
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" fillHeight="false" prefHeight="26.0" prefWidth="200.0" spacing="30.0">
+                    <HBox prefHeight="20.0" prefWidth="440.0">
+                        <TextField fx:id="searchField" prefHeight="10.0" prefWidth="300.0"
+                                   promptText="Please join my game" style="-fx-border-width: 2;">
+                            <styleClass>
+                                <String fx:value="container"/>
+                                <String fx:value="light-container"/>
+                            </styleClass>
+                        </TextField>
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="300.0">
+                        <CheckBox fx:id="onlyFriendsGames" mnemonicParsing="false" styleClass="small-medium"
+                                  text="Only show games of friends " textAlignment="RIGHT"/>
+                    </HBox>
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="-5.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="660.0" spacing="10.0"
+                      style="-fx-border-radius: 2;">
+                    <HBox fx:id="gameNameHbox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0"
+                          spacing="5.0">
+                        <Text fx:id="gameName" fill="#ff8000" onMouseClicked="#sortGamesName" strokeType="OUTSIDE"
+                              strokeWidth="0.0" styleClass="small-large" text="Game Name"/>
+                        <ImageView fx:id="arrowGameName" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </HBox>
+                    <HBox fx:id="hostHbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                        <Text fx:id="host" fill="#ff8000" onMouseClicked="#sortGamesHost" strokeType="OUTSIDE"
+                              strokeWidth="0.0" styleClass="small-large" text="Host"/>
+                        <ImageView fx:id="arrowHost" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </HBox>
+                    <HBox fx:id="playerCountHbox" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0"
+                          spacing="5.0" style="-fx-border-radius: 2;">
+                        <Text fx:id="playerCount" fill="#ff8000" onMouseClicked="#sortGamesPlayerCount"
+                              strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-large" text="Player count"/>
+                        <ImageView fx:id="arrowPlayerCount" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                        <HBox.margin>
+                            <Insets right="5.0"/>
+                        </HBox.margin>
+                    </HBox>
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="lobby-list-label"/>
+                    </styleClass>
+                    <VBox.margin>
+                        <Insets top="-10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <ListView fx:id="gameList" prefHeight="350.0" prefWidth="660.0" style="-fx-border-radius: 2;">
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                    <VBox.margin>
+                        <Insets top="-18.0"/>
+                    </VBox.margin>
+                </ListView>
+                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="660.0">
+                    <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" styleClass="back-button"
+                            text="%logout">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Button>
+                    <Button fx:id="newGameButton" mnemonicParsing="false" onAction="#newGame" text="%new.game.title">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets left="50.0" right="50.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Button fx:id="joinButton" mnemonicParsing="false" onAction="#join" text="%join.game">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </Button>
+                    <VBox.margin>
+                        <Insets top="-10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <padding>
+                    <Insets left="20.0" right="20.0"/>
+                </padding>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+                <Pane fx:id="friendListContainer" prefHeight="280.0" prefWidth="380.0"/>
+                <Pane fx:id="requestListContainer" prefHeight="200.0" prefWidth="380.0"/>
+                <HBox.margin>
+                    <Insets/>
+                </HBox.margin>
+            </VBox>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </HBox>
+    </VBox>
+</AnchorPane>

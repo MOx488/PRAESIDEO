@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<fx:root fx:id="travelTabRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+         minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0"
+         stylesheets="@../../styles.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.troopview.TravelTabComponent">
+    <VBox fx:id="travelTaskBox" alignment="CENTER" layoutX="355.0" layoutY="181.0" prefHeight="138.0" prefWidth="290.0"
+          styleClass="fleet-container" AnchorPane.bottomAnchor="181.39999999999998" AnchorPane.leftAnchor="355.0"
+          AnchorPane.rightAnchor="355.4000000000001" AnchorPane.topAnchor="181.0"/>
+</fx:root>

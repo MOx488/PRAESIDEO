@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<fx:root alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="25.0" prefWidth="133.0" stylesheets="@../../styles.css" type="HBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.buildings.BuildingComponent">
+    <VBox fx:id="buildingIconVBox" alignment="CENTER" fillWidth="false" prefHeight="37.0" prefWidth="27.0"
+          styleClass="vBox-buildingIcon">
+        <ImageView fx:id="buildingImage" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true"/>
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+    </VBox>
+    <Label fx:id="buildingName" styleClass="small-large">
+        <HBox.margin>
+            <Insets left="5.0"/>
+        </HBox.margin>
+    </Label>
+</fx:root>

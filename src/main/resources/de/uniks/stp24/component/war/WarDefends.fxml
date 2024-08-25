@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0"
+         prefWidth="440.0" stylesheets="@../../styles.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.war.WarDefendsComponent">
+    <VBox fx:id="avatarBox" layoutX="23.0" layoutY="50.0" prefHeight="93.0" prefWidth="64.0"
+          styleClass="avatar-image-container">
+        <ImageView fx:id="enemyImage" fitHeight="92.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true"/>
+    </VBox>
+    <Label fx:id="enemyName" layoutX="102.0" layoutY="86.0" styleClass="medium" text="Label"/>
+    <Button fx:id="reasonButton" layoutX="314.0" layoutY="75.0" mnemonicParsing="false" onAction="#seeReason"
+            prefHeight="42.0" prefWidth="111.0" text="Reason"/>
+    <HBox layoutX="138.0" layoutY="14.0">
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="dark-container"/>
+        </styleClass>
+        <Label fx:id="warName" alignment="CENTER" prefHeight="33.0" prefWidth="158.0" styleClass="medium"
+               text="WarName"/>
+    </HBox>
+</fx:root>

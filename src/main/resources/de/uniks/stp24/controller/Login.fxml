@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane minHeight="800.0" minWidth="1200.0" styleClass="default-background" stylesheets="@../styles.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.uniks.stp24.controller.LoginController">
+    <VBox alignment="CENTER" fillWidth="false" layoutX="410.0" layoutY="200.0" AnchorPane.bottomAnchor="63.5"
+          AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="200.0">
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="420.0" prefWidth="380.0" spacing="12.0" style="-fx-border-color: black; -fx-border-width: 4;">
+            <Label alignment="CENTER" styleClass="large" text="PRAESIDEO">
+                <font>
+                    <Font size="48.0"/>
+                </font>
+            </Label>
+            <Text fx:id="accDeletedText" fill="#18b220" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="Your Account is deleted!" textAlignment="CENTER" visible="false">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+                <styleClass>
+                    <String fx:value="success"/>
+                    <String fx:value="small"/>
+                </styleClass>
+            </Text>
+            <VBox spacing="4.0">
+                <Label fx:id="usernameLabel" styleClass="medium" text="%username">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="usernameField" promptText="%enter.username">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="light-container"/>
+                        <String fx:value="container"/>
+                    </styleClass>
+                </TextField>
+            </VBox>
+            <VBox spacing="4.0">
+                <Label fx:id="passwordLabel" styleClass="medium" text="%password">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordField" promptText="%enter.password">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="light-container"/>
+                        <String fx:value="container"/>
+                    </styleClass>
+                </PasswordField>
+            </VBox>
+            <HBox>
+                <CheckBox fx:id="rememberCheckbox" mnemonicParsing="false" styleClass="small" text="%remember.me">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </CheckBox>
+                <Region HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <TextFlow textAlignment="CENTER">
+                <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="error"/>
+                        <String fx:value="small"/>
+                    </styleClass>
+                </Text>
+            </TextFlow>
+            <HBox alignment="CENTER">
+                <Button fx:id="signupButton" mnemonicParsing="false" onAction="#signup" styleClass="back-button"
+                        text="%signup">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="loginButton" defaultButton="true" mnemonicParsing="false" onAction="#login"
+                        text="%login">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </HBox>
+            <padding>
+                <Insets left="40.0" right="40.0"/>
+            </padding>
+            <styleClass>
+                <String fx:value="dark-container"/>
+                <String fx:value="container"/>
+            </styleClass>
+        </VBox>
+        <Region minHeight="12.0" prefHeight="12.0" prefWidth="50.0"/>
+        <VBox alignment="CENTER" minHeight="90.0" minWidth="180.0" spacing="28.0"
+              style="-fx-border-color: black; -fx-border-width: 2;">
+            <padding>
+                <Insets bottom="8.0" left="20.0" right="20.0" top="8.0"/>
+            </padding>
+            <Label fx:id="languageLabel" styleClass="medium" text="%select.language">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Label>
+            <HBox>
+                <ToggleButton fx:id="setDeButton" mnemonicParsing="false">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="languageGroup"/>
+                    </toggleGroup>
+                    <graphic>
+                        <ImageView fx:id="languageDeImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </ToggleButton>
+                <Region HBox.hgrow="ALWAYS"/>
+                <ToggleButton fx:id="setEnButton" mnemonicParsing="false" toggleGroup="$languageGroup">
+                    <graphic>
+                        <ImageView fx:id="languageEnImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </ToggleButton>
+            </HBox>
+            <styleClass>
+                <String fx:value="dark-container"/>
+                <String fx:value="container"/>
+            </styleClass>
+        </VBox>
+    </VBox>
+    <VBox fx:id="infoBox" alignment="CENTER" layoutX="14.399999618530273" layoutY="14.399999618530273" minHeight="45.0"
+          minWidth="45.0" onMouseClicked="#licensesAndCredits" prefHeight="45.0" prefWidth="45.0"
+          AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="28.0">
+        <ImageView fx:id="infoImage" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#licensesAndCredits"
+                   pickOnBounds="true" preserveRatio="true">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </ImageView>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root stylesheets="@../../styles.css" type="HBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.enhancements.EnhancementItemComponent">
+    <VBox fx:id="scientistsBoarder" styleClass="enhancementLabel" stylesheets="@../../styles.css">
+        <ImageView fx:id="scientistsImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true"/>
+    </VBox>
+    <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets left="10.0"/>
+        </padding>
+        <Label fx:id="itemTag" prefHeight="16.0" prefWidth="100.0" styleClass="enhancementLabel"
+               stylesheets="@../../styles.css" textAlignment="CENTER"/>
+        <Label fx:id="scientistsName" styleClass="medium" stylesheets="@../../styles.css" text="physicsName"/>
+        <HBox fx:id="itemBox" alignment="CENTER_LEFT" spacing="10.0" VBox.vgrow="ALWAYS">
+            <StackPane>
+                <HBox alignment="CENTER" stylesheets="@../../styles.css">
+                    <styleClass>
+                        <String fx:value="small-container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                    <Label fx:id="itemNoJob" styleClass="medium" stylesheets="@../../styles.css"
+                           text="%enhancement.not.working"/>
+                </HBox>
+                <HBox fx:id="itemClickedBox" minWidth="-Infinity" prefWidth="315.0" spacing="5.0"
+                      stylesheets="@../../styles.css">
+                    <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0"/>
+                    </padding>
+                    <VBox onMouseClicked="#showTask" HBox.hgrow="ALWAYS">
+                        <VBox prefHeight="45.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                            <Label fx:id="itemTechnologie" alignment="TOP_LEFT" prefHeight="45.0" prefWidth="233.0"
+                                   styleClass="medium" stylesheets="@../../styles.css" text="Label" wrapText="true"
+                                   VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="233.0" spacing="10.0"
+                              VBox.vgrow="ALWAYS">
+                            <ProgressBar fx:id="itemProgressBar" maxWidth="-Infinity" minWidth="-Infinity"
+                                         prefHeight="18.0" prefWidth="191.0" progress="0.0" style="-fx-accent: green;"
+                                         styleClass="custom-progress-bar" HBox.hgrow="ALWAYS"/>
+                            <Label fx:id="itemDate" minWidth="-Infinity" styleClass="small"
+                                   stylesheets="@../../styles.css" text="100%" HBox.hgrow="ALWAYS"/>
+                        </HBox>
+                    </VBox>
+                    <VBox alignment="CENTER" prefHeight="84.0" prefWidth="41.0">
+                        <ImageView fx:id="itemCross" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#clickCross"
+                                   pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS"/>
+                    </VBox>
+                </HBox>
+            </StackPane>
+            <Button fx:id="itemViewEnhancementsButton" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#openList" prefHeight="70.0" prefWidth="175.0"
+                    text="%view.enhancements" textAlignment="CENTER" wrapText="true"/>
+        </HBox>
+    </VBox>
+</fx:root>

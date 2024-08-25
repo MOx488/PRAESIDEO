@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0"
+         prefWidth="471.0" stylesheets="@../../styles.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.war.PeaceComponent">
+    <VBox fx:id="avatarBox" layoutX="26.0" layoutY="20.0" prefHeight="93.0" prefWidth="64.0"
+          styleClass="avatar-image-container">
+        <ImageView fx:id="portraitImage" fitHeight="92.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true"/>
+    </VBox>
+    <Label fx:id="empireName" layoutX="107.0" layoutY="57.0" styleClass="medium" text="Label"/>
+    <Button fx:id="declareWarButton" layoutX="318.0" layoutY="45.0" mnemonicParsing="false" onAction="#declareWar"
+            prefHeight="42.0" prefWidth="138.0" text="Declare War"/>
+</fx:root>

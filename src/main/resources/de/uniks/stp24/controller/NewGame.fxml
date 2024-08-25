@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="default-background" stylesheets="@../styles.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.uniks.stp24.controller.NewGameController">
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0"
+              prefWidth="450.0" spacing="10.0" style="-fx-border-color: black; -fx-border-width: 4;"
+              VBox.vgrow="ALWAYS">
+            <styleClass>
+                <String fx:value="container"/>
+                <String fx:value="dark-container"/>
+            </styleClass>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="large" text="%new.game.title">
+                <font>
+                    <Font name="System Bold" size="36.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets bottom="30.0"/>
+                </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="Name">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Text>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+                <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0"
+                           prefWidth="300.0" promptText="%enter.game.name" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                </TextField>
+                <HBox alignment="TOP_RIGHT" prefHeight="0.0" prefWidth="300.0">
+                    <Text fx:id="nameErrorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0"
+                          text="Game Name is already taken!" visible="false"/>
+                </HBox>
+            </VBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="%password">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Text>
+            <VBox prefHeight="42.0" prefWidth="300.0">
+                <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0"
+                               prefWidth="300.0" promptText="%enter.password" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                </PasswordField>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="300.0"
+                      VBox.vgrow="ALWAYS">
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0"/>
+                </HBox>
+            </VBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="medium" text="%map.size">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Text>
+            <ChoiceBox fx:id="mapSizeBox" prefHeight="42.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+                <styleClass>
+                    <String fx:value="container"/>
+                    <String fx:value="light-container"/>
+                    <String fx:value="choiceBoxNormal"/>
+                </styleClass>
+            </ChoiceBox>
+            <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="missing Username">
+                <styleClass>
+                    <String fx:value="small"/>
+                    <String fx:value="error"/>
+                </styleClass>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="300.0">
+                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                    <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false" onAction="#cancel"
+                            styleClass="back-button" text="%cancel">
+                        <font>
+                            <Font size="20.0"/>
+                        </font>
+                    </Button>
+                </VBox>
+                <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                    <Button fx:id="createButton" defaultButton="true" mnemonicParsing="false" onAction="#createGame"
+                            text="%create">
+                        <font>
+                            <Font size="20.0"/>
+                        </font>
+                    </Button>
+                </VBox>
+            </HBox>
+        </VBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0"
+         prefWidth="767.0" stylesheets="@../../styles.css" type="VBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.traits.TraitsComponent">
+    <AnchorPane prefHeight="54.0" prefWidth="720.0">
+        <Label fx:id="stillSelectLabel" layoutX="23.0" layoutY="24.0" styleClass="medium" text="%traits.stillSelect"/>
+        <HBox alignment="CENTER_LEFT" layoutX="592.0" layoutY="17.0" AnchorPane.rightAnchor="30.0">
+            <Label alignment="CENTER_RIGHT" styleClass="medium" text="%traits.points.left"/>
+            <ImageView fx:id="traitPointsIcon" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true"
+                       preserveRatio="true">
+                <HBox.margin>
+                    <Insets left="5.0"/>
+                </HBox.margin>
+            </ImageView>
+            <Label fx:id="traitPointsLabel" styleClass="medium">
+                <HBox.margin>
+                    <Insets left="5.0"/>
+                </HBox.margin>
+            </Label>
+        </HBox>
+    </AnchorPane>
+    <HBox prefHeight="366.0" prefWidth="767.0">
+        <VBox prefWidth="250.0">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <Label prefHeight="22.0" prefWidth="142.0" styleClass="medium" text="%available">
+                <VBox.margin>
+                    <Insets left="2.0"/>
+                </VBox.margin>
+            </Label>
+            <ListView fx:id="availableTraitsList" prefHeight="337.0" prefWidth="241.0" stylesheets="@../../styles.css">
+                <styleClass>
+                    <String fx:value="container"/>
+                    <String fx:value="light-container"/>
+                </styleClass>
+            </ListView>
+            <opaqueInsets>
+                <Insets left="10.0"/>
+            </opaqueInsets>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <Label prefHeight="22.0" prefWidth="149.0" styleClass="medium" text="%traits.yours">
+                <VBox.margin>
+                    <Insets left="2.0"/>
+                </VBox.margin>
+            </Label>
+            <ListView fx:id="ownedTraitsList" prefHeight="337.0" prefWidth="230.0">
+                <styleClass>
+                    <String fx:value="light-container"/>
+                    <String fx:value="container"/>
+                </styleClass>
+            </ListView>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutX="224.0" layoutY="10.0" prefHeight="338.0" prefWidth="230.0"
+              styleClass="medium">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <HBox>
+                <Label prefHeight="22.0" prefWidth="224.0" styleClass="medium" text="%traits.focused">
+                    <HBox.margin>
+                        <Insets left="2.0"/>
+                    </HBox.margin>
+                </Label>
+            </HBox>
+            <VBox prefHeight="235.0" prefWidth="221.0" styleClass="container">
+                <ScrollPane fx:id="scrollPaneTraitInfo" hbarPolicy="NEVER" prefHeight="235.0" prefWidth="216.0"
+                            style="-fx-background-color: transparent;" styleClass="building-listView-container">
+                    <VBox fx:id="traitInformationVBox" pickOnBounds="false" prefHeight="235.0" prefWidth="198.0"
+                          styleClass="light-container">
+                        <Label fx:id="traitNameLabel" styleClass="small-medium" text="TraitName">
+                            <VBox.margin>
+                                <Insets left="5.0" top="5.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <padding>
+                            <Insets bottom="5.0"/>
+                        </padding>
+                    </VBox>
+                    <VBox.margin>
+                        <Insets left="-1.0" right="-1.0" top="-1.0"/>
+                    </VBox.margin>
+                </ScrollPane>
+            </VBox>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Label fx:id="errorLabel" text="Label">
+                <styleClass>
+                    <String fx:value="small"/>
+                    <String fx:value="error"/>
+                </styleClass>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </Label>
+            <Button fx:id="traitButton" mnemonicParsing="false" prefHeight="72.0" prefWidth="130.0">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+                <graphic>
+                    <VBox alignment="TOP_CENTER" prefHeight="62.0" prefWidth="118.0">
+                        <HBox alignment="TOP_CENTER">
+                            <Label fx:id="traitButtonLabel" styleClass="medium" text="%select.button"/>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="96.0">
+                            <ImageView fx:id="traitPointsButtonIcon" fitHeight="30.0" fitWidth="30.0"
+                                       pickOnBounds="true" preserveRatio="true"/>
+                            <Label fx:id="traitButtonCostLabel" styleClass="medium">
+                                <HBox.margin>
+                                    <Insets left="5.0"/>
+                                </HBox.margin>
+                            </Label>
+                        </HBox>
+                    </VBox>
+                </graphic>
+            </Button>
+        </VBox>
+        <padding>
+            <Insets left="18.0"/>
+        </padding>
+    </HBox>
+    <padding>
+        <Insets bottom="18.0"/>
+    </padding>
+</fx:root>

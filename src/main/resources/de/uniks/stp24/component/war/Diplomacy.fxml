@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<fx:root fx:id="diplomacyRoot" pickOnBounds="false" type="HBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.war.DiplomacyComponent">
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false"
+          prefHeight="479.0" prefWidth="569.0" stylesheets="@../../styles.css">
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="dark-container"/>
+        </styleClass>
+        <Text fx:id="diplomacyTitle" fill="#ff8000" layoutX="24.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              styleClass="small-large" text="%diplomacy" textAlignment="CENTER">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Text>
+        <StackPane fx:id="listContainer" layoutX="24.0" layoutY="83.0" prefHeight="366.0" prefWidth="522.0"/>
+        <ChoiceBox fx:id="diplomacyFilter" layoutX="324.0" layoutY="25.0" prefHeight="37.0" prefWidth="222.0"
+                   styleClass="custom-menu-button" stylesheets="@../../styles.css"/>
+        <ImageView fx:id="warImage" fitHeight="53.0" fitWidth="48.0" layoutX="146.0" layoutY="16.0" pickOnBounds="true"
+                   preserveRatio="true"/>
+        <HBox.margin>
+            <Insets right="5.0"/>
+        </HBox.margin>
+    </Pane>
+    <VBox fx:id="reasonBox" pickOnBounds="false">
+        <HBox prefHeight="226.0" prefWidth="242.0">
+            <AnchorPane stylesheets="@../../styles.css">
+                <styleClass>
+                    <String fx:value="container"/>
+                    <String fx:value="dark-container"/>
+                </styleClass>
+                <HBox alignment="CENTER" layoutX="6.4" layoutY="3.0" prefHeight="26.0" prefWidth="222.0"
+                      AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="19.0">
+                    <Label fx:id="reasonName" styleClass="medium" stylesheets="@../../styles.css" text="Label">
+                        <padding>
+                            <Insets top="5.0"/>
+                        </padding>
+                        <HBox.margin>
+                            <Insets left="20.0"/>
+                        </HBox.margin>
+                    </Label>
+                </HBox>
+                <StackPane layoutX="40.0" layoutY="51.20000076293945" AnchorPane.bottomAnchor="47.599999999999994"
+                           AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="31.599999999999994"
+                           AnchorPane.topAnchor="48.0">
+                    <ImageView fx:id="reasonImage" fitHeight="134.0" fitWidth="169.0" nodeOrientation="INHERIT"
+                               pickOnBounds="true" preserveRatio="true"/>
+                </StackPane>
+                <ImageView fx:id="unSeeReasonImage" fitHeight="22.0" fitWidth="21.0" layoutX="212.0" layoutY="3.0"
+                           onMouseClicked="#unSeeReason" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0"/>
+            </AnchorPane>
+        </HBox>
+    </VBox>
+</fx:root>

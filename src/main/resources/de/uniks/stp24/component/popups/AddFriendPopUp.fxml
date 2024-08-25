@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="280.0" prefWidth="440.0" stylesheets="@../../styles.css" type="VBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.popups.AddFriendPopUpComponent">
+    <styleClass>
+        <String fx:value="container"/>
+        <String fx:value="dark-container"/>
+    </styleClass>
+    <padding>
+        <Insets left="60.0" right="60.0"/>
+    </padding>
+    <Label styleClass="medium-large" text="%new.friend"/>
+    <Label styleClass="medium" text="%friend"/>
+    <TextField fx:id="friendNameField" promptText="%friend.name">
+        <styleClass>
+            <String fx:value="container"/>
+            <String fx:value="light-container"/>
+        </styleClass>
+    </TextField>
+    <Region prefHeight="40.0" prefWidth="0.0"/>
+    <HBox alignment="CENTER">
+        <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" styleClass="back-button" text="%cancel"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="sendRequestButton" defaultButton="true" mnemonicParsing="false" onAction="#sendRequest"
+                text="%send.request"/>
+    </HBox>
+</fx:root>

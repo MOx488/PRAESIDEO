@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane minHeight="800.0" minWidth="1200.0" styleClass="default-background" stylesheets="@../styles.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="de.uniks.stp24.controller.UserSettingsController">
+    <HBox alignment="CENTER" layoutX="380.0" layoutY="178.0" AnchorPane.bottomAnchor="122.66666666666663"
+          AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="178.0">
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="500.0" prefWidth="440.0" spacing="20.0" style="-fx-border-color: black; -fx-border-width: 4;"
+              HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets bottom="16.0" left="40.0" right="40.0" top="16.0"/>
+            </padding>
+            <Label alignment="CENTER" styleClass="medium-large" text="%update.information" textAlignment="CENTER"
+                   wrapText="true" VBox.vgrow="ALWAYS">
+                <font>
+                    <Font name="System Bold" size="32.0"/>
+                </font>
+            </Label>
+            <HBox alignment="TOP_RIGHT" minHeight="-Infinity" prefHeight="4.0" prefWidth="432.0"/>
+            <VBox prefHeight="29.0" prefWidth="432.0">
+                <Label styleClass="medium" text="%username" wrapText="true" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="usernameField" promptText="%enter.username" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                </TextField>
+                <HBox alignment="TOP_RIGHT" minHeight="-Infinity" prefHeight="24.0" prefWidth="432.0">
+                    <Text fx:id="nameErrorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0"
+                          text="Username is already taken!" visible="false">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                        <styleClass>
+                            <String fx:value="small"/>
+                            <String fx:value="error"/>
+                        </styleClass>
+                    </Text>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="0.0" prefWidth="432.0">
+                <Label styleClass="medium" text="%password" wrapText="true" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordField" promptText="%enter.password" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="container"/>
+                        <String fx:value="light-container"/>
+                    </styleClass>
+                </PasswordField>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="0.0" prefWidth="432.0" spacing="4.0">
+                <HBox alignment="BOTTOM_CENTER" minHeight="-Infinity" prefHeight="24.0" prefWidth="432.0">
+                    <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="missing Username">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                        <styleClass>
+                            <String fx:value="small"/>
+                            <String fx:value="error"/>
+                        </styleClass>
+                    </Text>
+                </HBox>
+                <HBox alignment="TOP_RIGHT" minHeight="-Infinity" prefHeight="12.0" prefWidth="432.0"/>
+                <HBox>
+                    <Button fx:id="updateAndSaveButton" defaultButton="true" mnemonicParsing="false"
+                            onAction="#updateAndSave" styleClass="medium-button" text="%update.and.save"
+                            textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Button>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="deleteAccountButton" defaultButton="true" mnemonicParsing="false"
+                            onAction="#deleteAccount" styleClass="medium-button" text="%delete.account"
+                            textAlignment="CENTER" wrapText="true">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </Button>
+                </HBox>
+                <HBox alignment="TOP_RIGHT" minHeight="-Infinity" prefHeight="12.0" prefWidth="432.0"/>
+            </VBox>
+            <Button fx:id="backButton" cancelButton="true" maxHeight="-Infinity" maxWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#backToLobby" text="%back" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+                <styleClass>
+                    <String fx:value="back-button"/>
+                    <String fx:value="medium-button"/>
+                </styleClass>
+            </Button>
+            <styleClass>
+                <String fx:value="container"/>
+                <String fx:value="dark-container"/>
+            </styleClass>
+        </VBox>
+    </HBox>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root fx:id="updateTroopTabRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+         minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0"
+         stylesheets="@../../styles.css" type="AnchorPane" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.troopview.UpdateTroopTabComponent">
+    <HBox alignment="TOP_CENTER" layoutX="14.0" layoutY="31.0" spacing="40.0"
+          AnchorPane.bottomAnchor="37.599999999999966" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%size"/>
+            <ListView fx:id="updateSizeListView" prefHeight="300.0" prefWidth="200.0" styleClass="fleet-container">
+                <padding>
+                    <Insets bottom="8.0" left="6.0" right="12.0" top="8.0"/>
+                </padding>
+            </ListView>
+        </VBox>
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%plan.units"/>
+            <ListView fx:id="updateUnitsListView" prefHeight="300.0" prefWidth="200.0" styleClass="fleet-container">
+                <padding>
+                    <Insets bottom="8.0" left="6.0" right="12.0" top="8.0"/>
+                </padding>
+            </ListView>
+            <Region prefHeight="16.0" prefWidth="16.0"/>
+            <TextField fx:id="troopNameTextField" promptText="%update.troop.name">
+                <styleClass>
+                    <String fx:value="container"/>
+                    <String fx:value="light-container"/>
+                </styleClass>
+            </TextField>
+            <Region prefHeight="16.0" prefWidth="16.0"/>
+            <Button fx:id="updateTroopButton" mnemonicParsing="false" onAction="#updateTroop"
+                    styleClass="white-prompt-button" text="%update.troop"/>
+        </VBox>
+        <VBox alignment="TOP_CENTER">
+            <Label styleClass="small-large" text="%focused.unit"/>
+            <Pane styleClass="fleet-container">
+                <ScrollPane fx:id="updateFocusedUnitScrollPane" prefHeight="295.0" prefWidth="200.0"
+                            style="-fx-background-color: transparent;">
+                    <padding>
+                        <Insets bottom="8.0" left="20.0" right="20.0" top="8.0"/>
+                    </padding>
+                </ScrollPane>
+            </Pane>
+        </VBox>
+    </HBox>
+</fx:root>

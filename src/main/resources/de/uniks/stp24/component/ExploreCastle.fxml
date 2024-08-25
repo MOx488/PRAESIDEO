@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root fx:id="exploreCastleRoot" alignment="CENTER" spacing="16.0" stylesheets="@../styles.css" type="HBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.ExploreCastleComponent">
+    <VBox>
+        <Label fx:id="exploreLabel" styleClass="medium-large" text="EXPLORE CASTLE"/>
+        <SplitPane fx:id="costBoxToolTipOwner" style="-fx-background-color: transparent;">
+            <HBox fx:id="costBox" alignment="CENTER_LEFT">
+                <Label styleClass="medium" text="%cost"/>
+            </HBox>
+        </SplitPane>
+        <Label fx:id="errorLabel">
+            <styleClass>
+                <String fx:value="small"/>
+                <String fx:value="error"/>
+            </styleClass>
+        </Label>
+    </VBox>
+    <VBox alignment="CENTER" HBox.hgrow="NEVER">
+        <SplitPane fx:id="exploreTooltipOwner" prefHeight="61.0" prefWidth="115.0"
+                   style="-fx-background-color: transparent;">
+            <tooltip>
+                <Tooltip height="1000.0" styleClass="medium" width="1000.0"/>
+            </tooltip>
+            <Button fx:id="exploreButton" mnemonicParsing="false" onAction="#onButtonClick"
+                    styleClass="white-prompt-button" text="EXPLORE"/>
+        </SplitPane>
+    </VBox>
+    <styleClass>
+        <String fx:value="container"/>
+        <String fx:value="light-container"/>
+    </styleClass>
+    <padding>
+        <Insets bottom="12.0" left="16.0" right="16.0" top="12.0"/>
+    </padding>
+</fx:root>

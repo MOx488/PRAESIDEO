@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<fx:root alignment="CENTER_LEFT" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity" stylesheets="@../../styles.css" type="HBox" xmlns="http://javafx.com/javafx/21"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.buildings.BuildingPopUpStatComponent">
+    <Label fx:id="resourceLabel" styleClass="small-medium">
+        <HBox.margin>
+            <Insets left="3.0" right="3.0"/>
+        </HBox.margin>
+    </Label>
+    <ImageView fx:id="resourceImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true"/>
+</fx:root>

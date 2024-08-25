@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<fx:root fx:id="sideButtonRoot" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity" pickOnBounds="false" stylesheets="@../styles.css" type="VBox"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="de.uniks.stp24.component.SideButtonsComponent">
+    <HBox pickOnBounds="false" spacing="5.0">
+        <VBox pickOnBounds="false">
+            <HBox fx:id="taskBox" maxHeight="40.0" maxWidth="40.0" onMouseClicked="#openTasks" prefHeight="40.0"
+                  prefWidth="40.0" styleClass="enhancement-not-selected">
+                <Label fx:id="taskToolTipLabel">
+                    <tooltip>
+                        <Tooltip maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.9" prefHeight="80.0"
+                                 prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 2;"
+                                 styleClass="light-container">
+                            <graphic>
+                                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0"
+                                      prefWidth="150.0">
+                                    <Text fx:id="taskText" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="small-large">
+                                        <font>
+                                            <Font size="28.0"/>
+                                        </font>
+                                    </Text>
+                                </HBox>
+                            </graphic>
+                        </Tooltip>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fx:id="taskButton" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                </Label>
+            </HBox>
+            <HBox fx:id="marketBox" maxHeight="40.0" maxWidth="40.0" onMouseClicked="#openMarket" prefHeight="40.0"
+                  prefWidth="40.0" styleClass="enhancement-not-selected">
+                <VBox.margin>
+                    <Insets bottom="10.0" top="10.0"/>
+                </VBox.margin>
+                <Label fx:id="marketToolTipLabel">
+                    <graphic>
+                        <ImageView fx:id="marketButton" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.9" prefHeight="80.0"
+                                 prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 2;"
+                                 styleClass="light-container">
+                            <graphic>
+                                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0"
+                                      prefWidth="150.0">
+                                    <Text fx:id="marketText" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="small-large">
+                                        <font>
+                                            <Font size="28.0"/>
+                                        </font>
+                                    </Text>
+                                </HBox>
+                            </graphic>
+                        </Tooltip>
+                    </tooltip>
+                </Label>
+            </HBox>
+            <HBox fx:id="enhancementsBox" maxHeight="40.0" maxWidth="40.0" onMouseClicked="#openEnhancements"
+                  prefHeight="40.0" prefWidth="40.0" styleClass="enhancement-not-selected">
+                <Label fx:id="enhancementsToolTipLabel">
+                    <graphic>
+                        <ImageView fx:id="enhancementsButton" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.9" prefHeight="80.0"
+                                 prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 2;"
+                                 styleClass="light-container">
+                            <graphic>
+                                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0"
+                                      prefWidth="150.0">
+                                    <Text fx:id="enhancementsText" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="small-large">
+                                        <font>
+                                            <Font size="28.0"/>
+                                        </font>
+                                    </Text>
+                                </HBox>
+                            </graphic>
+                        </Tooltip>
+                    </tooltip>
+                </Label>
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+            </HBox>
+            <HBox fx:id="diplomacyBox" maxHeight="40.0" maxWidth="40.0" onMouseClicked="#openDiplomacy"
+                  prefHeight="40.0" prefWidth="40.0" styleClass="enhancement-not-selected">
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+                <Label fx:id="diplomacyToolTipLabel">
+                    <graphic>
+                        <ImageView fx:id="diplomacyButton" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.9" prefHeight="80.0"
+                                 prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 2;"
+                                 styleClass="light-container">
+                            <graphic>
+                                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0"
+                                      prefWidth="150.0">
+                                    <Text fx:id="diplomacyText" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="small-large">
+                                        <font>
+                                            <Font size="28.0"/>
+                                        </font>
+                                    </Text>
+                                </HBox>
+                            </graphic>
+                        </Tooltip>
+                    </tooltip>
+                </Label>
+            </HBox>
+            <HBox fx:id="buildFleetsBox" maxHeight="40.0" maxWidth="40.0" onMouseClicked="#openBuildFleet"
+                  prefHeight="40.0" prefWidth="40.0" styleClass="enhancement-not-selected">
+                <Label fx:id="buildFleetsTooltipLabel">
+                    <graphic>
+                        <ImageView fx:id="buildFleetsButton" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.9" prefHeight="80.0"
+                                 prefWidth="150.0" style="-fx-border-color: black; -fx-border-width: 2;"
+                                 styleClass="light-container">
+                            <graphic>
+                                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0"
+                                      prefWidth="150.0">
+                                    <Text fx:id="buildFleetsText" fill="#ff8000" strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="small-large">
+                                        <font>
+                                            <Font size="28.0"/>
+                                        </font>
+                                    </Text>
+                                </HBox>
+                            </graphic>
+                        </Tooltip>
+                    </tooltip>
+                </Label>
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </HBox>
+        </VBox>
+        <StackPane fx:id="sideContainer" alignment="TOP_LEFT" pickOnBounds="false"/>
+    </HBox>
+</fx:root>
