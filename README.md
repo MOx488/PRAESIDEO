@@ -9,6 +9,9 @@ You can also explore, colonize, upgrade and develop other castles to produce mor
 All improvements and buildings take time to build and there can only be one of these tasks at a single castle at a time.
 You can trade resources at the market, research enhancements and experience various in-game events.
 
+## Trailer of the game
+![Trailer](https://github.com/MOx488/PRAESIDEO/blob/master/src/main/resources/de/uniks/stp24/docs/Trailer.gif)
+
 ## Installation
 There is no installation guide yet.
 
